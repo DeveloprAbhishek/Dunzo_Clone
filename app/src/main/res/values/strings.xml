@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Dunzo Clone</string>
+    <string name="get_started_with_dunzo">Get started with Dunzo</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="_91">+91</string>
 </resources>
