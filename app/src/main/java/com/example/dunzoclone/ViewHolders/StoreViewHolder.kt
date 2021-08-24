@@ -8,14 +8,14 @@ import kotlinx.android.synthetic.main.store_item_layout.view.*
 
 class StoreViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-//    fun setData(storeList: Store_list_Model) {
-//        itemView.apply {
-//            tvStoreName.text = storeList.store_name
-//            tvAddress.text = storeList.address
-//            tvDistance.text = storeList.distance
-//            tvTime.text = storeList.time
-//
-//            Glide.with(ivProductImage).load(storeList.image_url).into(ivProductImage)
-//        }
-//    }
+    fun setData(storeList: Store_list_Model) {
+        itemView.apply {
+            tvStoreName.text = storeList.store_name
+            tvAddress.text = storeList.address
+            tvDistance.text = storeList.distance
+            tvTime.text = storeList.time
+
+            Glide.with(ivProductImage).load(storeList.image_url).into(ivProductImage)
+        }
+    }
 }
