@@ -86,12 +86,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:scrollbarSize="0dp"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_12"
+
             android:background="@color/white"
             android:orientation="vertical">
 
