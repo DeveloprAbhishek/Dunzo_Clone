@@ -24,7 +24,30 @@ import java.lang.Exception
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(1)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
+        window.statusBarColor = Color.TRANSPARENT
         setContentView(R.layout.activity_splash_screen)
+
+
+        val path = "android.resource://com.example.dunzoclone/" + R.raw.splash
+
+        val uri = Uri.parse(path)
+        videoView.setVideoURI(uri)
+
+        videoView.setOnPreparedListener { mp -> mp.start() }
+
+        videoView.setOnCompletionListener {
+            startActivity(
+                Intent(
+                    this,
+                    HomeActivity::class.java
+                )
+            )
+        }
     }
 
 }
