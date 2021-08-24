@@ -11,15 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
         <activity android:name=".Activities.UserProfileActivity"/>
-        <activity android:name=".Activities.HomeActivity" />
-        <activity android:name=".Activities.VerifyMobileActivity" />
-        <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.SplashScreen" >
+        <activity android:name=".Activities.HomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Activities.VerifyMobileActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Activities.SplashScreen" >
         </activity>
         <activity android:name=".MainActivity"/>
     </application>
