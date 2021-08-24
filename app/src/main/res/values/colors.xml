@@ -10,4 +10,8 @@
 
     <color name="primary">#005C3F</color>
     <color name="porcelain">#F2F3F7</color>
+    <color name="lightgreen">#01b37b</color>
+    <color name="darkgreen">#038352</color>
+    <color name="grey">#f1f0f4</color>
+
 </resources>

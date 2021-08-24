@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Dunzo Clone</string>
+    <string name="get_started_with_dunzo">Get started with Dunzo</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="_91">+91</string>
+    <string name="verify_and_continue">Verify and Continue</string>
+    <string name="tvI_imp_guideline">The product image(s) shown are for representation purpose only. The actual product may vary. It is recommended to read the product labels (if any), batch details, directions for use, etc., as contained in the actual product before consuming and/or utilizing the product. The product is meant for fresh and immediate consumption, or as specified by the seller of the product. For other information, please contact the merchant directly.</string>
+    <string name="important_information">Important Information</string>
+    <string name="_1_kg">1 KG</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
