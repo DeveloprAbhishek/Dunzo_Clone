@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.store_item_layout.view.*
 
 class StoreViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    fun setData(storeList: Store_list_Model) {
+    fun setStoreData(storeList: Store_list_Model) {
         itemView.apply {
             tvStoreName.text = storeList.store_name
             tvAddress.text = storeList.address
