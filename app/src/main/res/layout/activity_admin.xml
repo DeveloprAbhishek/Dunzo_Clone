@@ -7,20 +7,15 @@
     android:background="#f2f2f2"
     android:orientation="vertical"
     tools:context=".Activities.AdminActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/white"
             android:padding="@dimen/dp_12">
 
             <ImageButton
+                android:id="@+id/ibBackButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -46,14 +41,15 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvEditDetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:textStyle="bold"
                     android:text="@string/edit"
                     android:textColor="@color/light_green"
                     android:textSize="16sp"
+                    android:textStyle="bold"
                     app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
                     tools:ignore="RelativeOverlap" />
 
@@ -73,6 +69,7 @@
                     tools:ignore="ContentDescription" />
 
                 <TextView
+                    android:id="@+id/tvUserPhoneNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
@@ -81,7 +78,6 @@
                     android:textColor="#b3b3b3"
                     android:textSize="@dimen/sp_18" />
             </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 
     <ScrollView
@@ -93,7 +89,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:background="@color/white"
             android:orientation="vertical">
 
@@ -168,7 +163,7 @@
                 app:drawableStartCompat="@drawable/ic_helmet_partner" />
 
             <TextView
-                android:id="@+id/tvNotification"
+                android:id="@+id/tvNotificationSettings"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
                 android:background="@color/white"
@@ -210,6 +205,7 @@
                 app:drawableStartCompat="@drawable/ic_info" />
 
             <TextView
+                android:id="@+id/tvVersionNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp_18"
