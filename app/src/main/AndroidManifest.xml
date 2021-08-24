@@ -16,6 +16,12 @@
         <activity android:name=".Activities.VerifyMobileActivity" />
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Activities.EmptyCartActivity"></activity>
         <activity android:name=".Activities.ProductDetailActivity">
             <intent-filter>
@@ -24,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.EmptyOrderScreen"></activity>
         <activity android:name=".MainActivity" />
 
         <meta-data
