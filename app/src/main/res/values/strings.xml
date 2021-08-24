@@ -9,4 +9,16 @@
     <string name="_1_kg">1 KG</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit">EDIT</string>
+    <string name="version_number">Version 3.34.0.1</string>
+    <string name="recent_orders">Recent Orders</string>
+    <string name="paytm">PayTm</string>
+    <string name="saved_address">Saved Address</string>
+    <string name="saved_cards">Saved cards</string>
+    <string name="refer_a_partner">Refer a partner</string>
+    <string name="notification_settings">Notification settings</string>
+    <string name="support">Support</string>
+    <string name="about">About</string>
+    <string name="hey_there">Hey There!</string>
+    <string name="phone_num_dummy">+914578124785</string>
 </resources>
