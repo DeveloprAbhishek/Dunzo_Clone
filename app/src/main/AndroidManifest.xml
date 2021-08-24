@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
-        <activity android:name=".Activities.EmptyCartActivity"></activity>
+        <activity android:name=".Activities.EmptyCartActivity"/>
         <activity android:name=".Activities.ProductDetailActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.EmptyOrderScreen"></activity>
+        <activity android:name=".Activities.EmptyOrderScreen"/>
         <activity android:name=".Activities.UserProfileActivity" />
         <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.VerifyMobileActivity" />
