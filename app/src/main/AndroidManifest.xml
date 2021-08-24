@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
+        <activity
+            android:name=".Activities.LocationActivity"
+            android:exported="true" />
         <activity android:name=".Activities.UserProfileActivity" />
         <activity android:name=".Activities.AdminActivity" />
         <activity android:name=".Activities.HomeActivity" />
