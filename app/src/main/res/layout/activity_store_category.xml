@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.StoreCategoryActivity">
+
+
+    <ImageView
+        android:id="@+id/ivBackbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
+    <TextView
+        android:id="@+id/tvStoreName"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/tirupati_vegetables_and_fruit_market"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toEndOf="@+id/ivBackbtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStoreLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rasta_pet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
+
+    <EditText
+        android:id="@+id/etSearchitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rectangle_border"
+        android:drawableStart="@drawable/ic_baseline_search"
+        android:hint="@string/enter_search_for_item"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/scrollMain"
+        app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
+
+    <ScrollView
+        android:id="@+id/scrollMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSearchitem">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvBestSeller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Best Sellers"
+                android:textSize="19dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvViewAll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="View All"
+                android:textSize="19dp"
+                android:gravity="end"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:textColor="@color/lightgreen"
+                android:textStyle="bold"/>
+            
+            <HorizontalScrollView
+                android:id="@+id/HpriScroll"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/tvViewAll"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width=""
+                        android:layout_height="">
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                
+            </HorizontalScrollView>
+            
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                android:layout_marginVertical="10dp"
+                android:layout_below="@+id/HpriScroll"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vLine"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

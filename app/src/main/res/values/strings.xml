@@ -9,4 +9,9 @@
     <string name="_1_kg">1 KG</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tirupati_vegetables_and_fruit_market">Tirupati Vegetables And Fruit Market</string>
+    <string name="fresh_fruits">Fresh Fruits</string>
+    <string name="enter_search_for_item">Enter Search For item</string>
+    <string name="rasta_pet">Rasta Pet</string>
+    <string name="_270">₹270</string>
 </resources>
