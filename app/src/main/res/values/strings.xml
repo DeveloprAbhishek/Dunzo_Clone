@@ -21,4 +21,8 @@
     <string name="about">About</string>
     <string name="hey_there">Hey There!</string>
     <string name="phone_num_dummy">+914578124785</string>
+    <string name="search_hint">   Address search e.g. Bangalore</string>
+    <string name="search_for_your_location">Search for your location</string>
+    <string name="or">OR</string>
+    <string name="use_current_location">Use current location</string>
 </resources>

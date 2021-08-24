@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    tools:context=".Activities.AdminActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_12">
+
+        <ImageButton
+            android:id="@+id/ibBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/ic_arrow_back_24"
+            app:tint="#404040"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+
+        <TextView
+            android:id="@+id/tvAdminName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:text="@string/search_for_your_location"
+            android:textColor="#404040" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@drawable/search_background"
+            android:hint="@string/search_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColorHint="#546E7A"
+            android:textSize="@dimen/sp_15"
+            app:drawableStartCompat="@drawable/ic_search_24" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_18"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="3dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/light_grey_1" />
+
+            <TextView
+                android:id="@+id/tv_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/or"
+                android:textColor="#757575" />
+
+            <View
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="3dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/light_grey_1" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/dp_7"
+            android:padding="@dimen/dp_7"
+            android:text="@string/use_current_location"
+            android:textColor="#43A047"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_gps" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -9,4 +9,7 @@
     <dimen name="dp_18">18dp</dimen>
     <dimen name="dp_70">70dp</dimen>
     <dimen name="dp_20">20dp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="dp_150">170dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
 </resources>
