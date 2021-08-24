@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#f2f2f2"
     android:orientation="vertical"
     tools:context=".Activities.AdminActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
         android:padding="@dimen/dp_12">
@@ -20,6 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:src="@drawable/ic_arrow_back_24"
             app:tint="#404040"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -36,6 +38,7 @@
 
 
         <EditText
+            android:id="@+id/etSearchBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_12"
@@ -59,7 +62,6 @@
                 android:layout_height="3dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-
                 android:layout_marginTop="@dimen/dp_12"
                 android:background="@color/light_grey_1" />
 
@@ -82,6 +84,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/tvUseCurrentLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_12"
@@ -93,5 +96,65 @@
             android:textStyle="bold"
             app:drawableStartCompat="@drawable/ic_gps" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_7"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:padding="@dimen/dp_12"
+            android:text="@string/recent_searches"
+            android:textColor="#404040"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:text="@string/bengaluru"
+            android:textColor="#404040"
+            app:drawableStartCompat="@drawable/ic_history" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_44"
+            android:text="@string/karnataka_india" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:padding="@dimen/dp_12"
+            android:text="@string/saved_addresses"
+            android:textColor="#404040"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:text="@string/home"
+            android:textColor="#404040"
+            app:drawableStartCompat="@drawable/ic_baseline_home_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_44"
+            android:text="@string/_01_level_14_ub_city_ashok_nagar_bangalore" />
     </LinearLayout>
 </LinearLayout>

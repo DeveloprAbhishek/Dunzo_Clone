@@ -44,7 +44,7 @@ class SplashScreen : AppCompatActivity() {
             startActivity(
                 Intent(
                     this,
-                    AdminActivity::class.java
+                    LocationActivity::class.java
                 )
             )
         }

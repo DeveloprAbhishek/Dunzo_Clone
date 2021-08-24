@@ -16,4 +16,10 @@
     <string name="search_for_your_location">Search for your location</string>
     <string name="or">OR</string>
     <string name="use_current_location">Use current location</string>
+    <string name="bengaluru">Bengaluru</string>
+    <string name="recent_searches">Recent searches</string>
+    <string name="karnataka_india">Karnataka, India</string>
+    <string name="saved_addresses">Saved addresses</string>
+    <string name="home">Home</string>
+    <string name="_01_level_14_ub_city_ashok_nagar_bangalore">01,Level 14, UB City, Ashok Nagar,Bangalore</string>
 </resources>
