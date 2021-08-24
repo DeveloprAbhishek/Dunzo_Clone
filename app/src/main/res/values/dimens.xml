@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+</resources>

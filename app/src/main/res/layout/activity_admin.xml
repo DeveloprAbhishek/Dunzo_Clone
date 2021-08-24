@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    tools:context=".Activities.AdminActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_12">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/ic_arrow_back_24"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:padding="@dimen/dp_7">
+
+                <TextView
+                    android:id="@+id/tvAdminName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:text="@string/hey_there"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_24"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:text="@string/edit"
+                    android:textColor="@color/light_green"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_4"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/phone_num_dummy"
+                    android:textAlignment="textEnd"
+                    android:textColor="#b3b3b3"
+                    android:textSize="@dimen/sp_18" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRecentOrders"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/recent_orders"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_cart" />
+
+            <TextView
+                android:id="@+id/tvPayTm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/paytm"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_paytm_icon" />
+
+            <TextView
+                android:id="@+id/tvSavedAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/saved_address"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_location_svgrepo_com_2_" />
+
+            <TextView
+                android:id="@+id/tvSavedCards"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/saved_cards"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_credit_cards" />
+
+            <TextView
+                android:id="@+id/tvReferAPartner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/refer_a_partner"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_helmet_partner" />
+
+            <TextView
+                android:id="@+id/tvNotification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/notification_settings"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_notification" />
+
+            <TextView
+                android:id="@+id/tvSupport"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/support"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_help_svgrepo_com" />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_18"
+                android:text="@string/about"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
+                app:drawableStartCompat="@drawable/ic_info" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_18"
+                android:text="@string/version_number"
+                android:textColor="@color/light_grey_1" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
