@@ -19,8 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/dp_7"
             android:background="@color/white"
-            android:padding="@dimen/dp_7"
             android:src="@drawable/ic_arrow_back_white"
             app:tint="#404040"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
