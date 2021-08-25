@@ -43,4 +43,6 @@
     <string name="saved_addresses">Saved addresses</string>
     <string name="home">Home</string>
     <string name="_01_level_14_ub_city_ashok_nagar_bangalore">01,Level 14, UB City, Ashok Nagar,Bangalore</string>
+    <string name="orders">Orders</string>
+    <string name="active_orders">Active Orders</string>
 </resources>

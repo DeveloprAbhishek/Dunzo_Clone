@@ -7,13 +7,14 @@
     android:id="@+id/storeCardView"
     android:padding="@dimen/dp_12">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivProductImage"
         android:layout_width="106dp"
         android:layout_height="106dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/humming"
+        android:src="@drawable/prateek"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedCorners"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
