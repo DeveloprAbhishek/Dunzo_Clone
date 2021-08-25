@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#f2f2f2"
     android:orientation="vertical"
     tools:context=".Activities.AdminActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        android:padding="@dimen/dp_12">
+        android:padding="@dimen/dp_9">
 
         <ImageButton
             android:id="@+id/ibBackButton"
@@ -36,9 +36,11 @@
 
 
         <EditText
+            android:id="@+id/etSearchBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_12"
+            android:drawablePadding="@dimen/dp_7"
             android:background="@drawable/search_background"
             android:hint="@string/search_hint"
             android:importantForAutofill="no"
@@ -47,21 +49,22 @@
             android:textSize="@dimen/sp_15"
             app:drawableStartCompat="@drawable/ic_search_24" />
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/dp_18"
-            android:orientation="horizontal">
+            android:layout_marginTop="@dimen/dp_7"
+            android:foregroundGravity="center_vertical">
 
             <View
-                android:layout_width="@dimen/dp_150"
-                android:layout_height="3dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-
-                android:layout_marginTop="@dimen/dp_12"
-                android:background="@color/light_grey_1" />
+                android:id="@+id/line1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/light_grey_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_or"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/tv_or"
@@ -69,29 +72,104 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center"
+                android:textSize="11sp"
                 android:text="@string/or"
-                android:textColor="#757575" />
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_marginRight="@dimen/dp_7"
+                android:textColor="#757575"
+                app:layout_constraintLeft_toRightOf="@id/line1"
+                app:layout_constraintRight_toLeftOf="@id/line2"
+                tools:ignore="MissingConstraints" />
 
             <View
-                android:layout_width="@dimen/dp_150"
-                android:layout_height="3dp"
+                android:id="@+id/line2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
                 android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="@dimen/dp_12"
-                android:background="@color/light_grey_1" />
-        </RelativeLayout>
+                android:background="@color/light_grey_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_or"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
+            android:id="@+id/tvUseCurrentLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginTop="2dp"
             android:background="@color/white"
             android:drawablePadding="@dimen/dp_7"
             android:padding="@dimen/dp_7"
             android:text="@string/use_current_location"
-            android:textColor="#43A047"
+            android:textColor="@color/light_green"
             android:textStyle="bold"
             app:drawableStartCompat="@drawable/ic_gps" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_7"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:padding="@dimen/dp_12"
+            android:text="@string/recent_searches"
+            android:textColor="#404040"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_12"
+            android:drawablePadding="@dimen/dp_3"
+            android:background="@color/white"
+            android:text="@string/bengaluru"
+            android:textColor="#404040"
+            app:drawableStartCompat="@drawable/ic_history" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_44"
+            android:text="@string/karnataka_india" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:padding="@dimen/dp_12"
+            android:text="@string/saved_addresses"
+            android:textColor="#404040"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_18"
+            android:drawablePadding="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:text="@string/home"
+            android:textColor="#404040"
+            app:drawableStartCompat="@drawable/ic_baseline_home_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_44"
+            android:text="@string/_01_level_14_ub_city_ashok_nagar_bangalore" />
     </LinearLayout>
 </LinearLayout>

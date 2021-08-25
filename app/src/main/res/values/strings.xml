@@ -33,7 +33,12 @@
     <string name="_270">₹270</string>
     <string name="view_all">View All</string>
     <string name="best_sellers">Best Sellers</string>
-    <string name="tirupati_vegetables_and_fruit_market">Tirupati Vegetables And Fruit Market</string>
     <string name="tirupati_farsan_fruits_and">Tirupati farsan fruits and vegetable market</string>
     <string name="tirupati_address">Shop No 4 ground floor, Sampada Nagari, Next to Shedge Dairy, 307, Somwar Peth, Pune-411011</string>
+    <string name="bengaluru">Bengaluru</string>
+    <string name="recent_searches">Recent searches</string>
+    <string name="karnataka_india">Karnataka, India</string>
+    <string name="saved_addresses">Saved addresses</string>
+    <string name="home">Home</string>
+    <string name="_01_level_14_ub_city_ashok_nagar_bangalore">01,Level 14, UB City, Ashok Nagar,Bangalore</string>
 </resources>

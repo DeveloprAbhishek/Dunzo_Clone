@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_12">
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="106dp"
+        android:layout_height="106dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/humming"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvStoreName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:text="Xpress Mart"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvDistance"
+        app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_18"
+        android:text="2.3 km"
+        app:layout_constraintBottom_toTopOf="@+id/tvTime"
+        app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvStoreName"
+        app:layout_constraintEnd_toStartOf="@id/iv_dot"/>
+
+    <ImageView
+        android:id="@+id/iv_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dot"
+        app:layout_constraintStart_toEndOf="@+id/tvDistance"
+        app:layout_constraintTop_toBottomOf="@+id/tvStoreName"
+        app:layout_constraintBottom_toTopOf="@id/tvTime"
+        app:layout_constraintEnd_toStartOf="@id/tvAddress"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Richmond Town"
+        app:layout_constraintBottom_toTopOf="@+id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvStoreName"
+        app:layout_constraintStart_toEndOf="@id/iv_dot"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_18"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:drawablePadding="@dimen/dp_7"
+        android:text="19 mins"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+        app:drawableStartCompat="@drawable/ic_clock" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

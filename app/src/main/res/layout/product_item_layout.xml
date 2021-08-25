@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_12">
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/humming"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/middleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivProductImage"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text="Xpress Mart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProductDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:maxLines="2"
+            android:text="Garlic (250 Gms) + Ginger (100 Gms)"
+            app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+        <TextView
+            android:id="@+id/tvQuantitySelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:text="4 items"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage" />
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text="₹ 70"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuantitySelector" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:background="@drawable/button_add_back"
+        android:drawableStart="@drawable/ic_plus_add"
+        android:padding="7dp"
+        android:text="ADD"
+        android:textColor="@color/light_green"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/middleLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
