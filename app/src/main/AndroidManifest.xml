@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -12,17 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
-        <activity android:name=".MapActivity"></activity>
-        <activity android:name=".CartActivity">
+        <activity android:name=".MapActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CartActivity">
+
+        </activity>
         <activity android:name=".Activities.StoreCategoryActivity" />
         <activity android:name=".Activities.EmptyCartActivity" />
-        <activity android:name=".Activities.ProductDetailActivity"></activity>
+        <activity android:name=".Activities.ProductDetailActivity">
+
+        </activity>
         <activity android:name=".Activities.EmptyOrderScreen" />
         <activity android:name=".Activities.UserProfileActivity" />
         <activity android:name=".Activities.HomeActivity" />
@@ -31,9 +36,16 @@
         <activity android:name=".Activities.SplashScreen" />
         <activity android:name=".MainActivity" />
 
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCKiPRwV5ckJTZ3936G9JI6dGey34ONaCw"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>
