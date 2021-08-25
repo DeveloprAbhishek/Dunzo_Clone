@@ -44,7 +44,7 @@ class SplashScreen : AppCompatActivity() {
             startActivity(
                 Intent(
                     this,
-                    ProductActivity::class.java
+                    StoresActivity::class.java
                 )
             )
         }

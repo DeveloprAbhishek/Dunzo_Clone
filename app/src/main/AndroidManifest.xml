@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
         <activity
+            android:name=".Activities.OrderDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.OrderActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activities.ProductActivity"
             android:exported="true" />
         <activity

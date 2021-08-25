@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="roundedCorners">
+        <item name="backgroundColor">@color/white</item>
+        <item name="cornerSize">15%</item>
+    </style>
+</resources>

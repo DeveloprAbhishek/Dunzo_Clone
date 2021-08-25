@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dunzoclone.R
 
-class StoresActivity : AppCompatActivity() {
+class OrderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.store_item_layout)
+        setContentView(R.layout.activity_order)
     }
 }
