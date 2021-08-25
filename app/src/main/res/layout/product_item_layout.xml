@@ -79,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_7"
-        android:background="@drawable/button_add_back"
+        android:background="@drawable/button_add_background"
         android:drawableStart="@drawable/ic_plus_add"
         android:padding="7dp"
         android:gravity="center"
