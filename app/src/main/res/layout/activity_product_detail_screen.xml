@@ -47,7 +47,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/ivItemImage" />
 
             <TextView
-                android:id="@+id/tvCartItemWeight"
+                android:id="@+id/tvItemQty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
@@ -59,7 +59,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvItemName" />
 
             <TextView
-                android:id="@+id/itemPrise"
+                android:id="@+id/tvItemPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
@@ -126,7 +126,7 @@
                 android:layout_height="3dp"
                 android:layout_marginVertical="10dp"
                 android:background="#f1f0f4"
-                app:layout_constraintTop_toBottomOf="@+id/itemPrise" />
+                app:layout_constraintTop_toBottomOf="@+id/tvItemPrice" />
 
             <TextView
                 android:id="@+id/tvImpGuidelines"

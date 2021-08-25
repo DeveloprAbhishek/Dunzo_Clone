@@ -9,6 +9,23 @@
     <string name="_1_kg">1 KG</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit">EDIT</string>
+    <string name="version_number">Version 3.34.0.1</string>
+    <string name="recent_orders">Recent Orders</string>
+    <string name="paytm">PayTm</string>
+    <string name="saved_address">Saved Address</string>
+    <string name="saved_cards">Saved cards</string>
+    <string name="refer_a_partner">Refer a partner</string>
+    <string name="notification_settings">Notification settings</string>
+    <string name="support">Support</string>
+    <string name="about">About</string>
+    <string name="hey_there">Hey There!</string>
+    <string name="phone_num_dummy">+914578124785</string>
+    <string name="search_hint">   Address search e.g. Bangalore</string>
+    <string name="search_for_your_location">Search for your location</string>
+    <string name="or">OR</string>
+    <string name="use_current_location">Use current location</string>
+
     <string name="tirupati_vegetables_and_fruit_market">Tirupati Vegetables And Fruit Market</string>
     <string name="fresh_fruits">Fresh Fruits</string>
     <string name="enter_search_for_item">Enter Search For item</string>
@@ -20,4 +37,12 @@
     <string name="tirupati_address">Shop No 4 ground floor, Sampada Nagari, Next to Shedge Dairy, 307, Somwar Peth, Pune-411011</string>
     <string name="apple_royal_gala">Apple Royal Gala</string>
     <string name="No_ContactDelivery">Partner will check with you and leave the order outside the your door.</string>
+    <string name="bengaluru">Bengaluru</string>
+    <string name="recent_searches">Recent searches</string>
+    <string name="karnataka_india">Karnataka, India</string>
+    <string name="saved_addresses">Saved addresses</string>
+    <string name="home">Home</string>
+    <string name="_01_level_14_ub_city_ashok_nagar_bangalore">01,Level 14, UB City, Ashok Nagar,Bangalore</string>
+    <string name="orders">Orders</string>
+    <string name="active_orders">Active Orders</string>
 </resources>

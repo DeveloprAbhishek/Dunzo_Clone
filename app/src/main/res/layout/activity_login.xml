@@ -30,11 +30,12 @@
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton"
+                android:id="@+id/btnLoginContinue"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="#03d290"
                 android:text="Continue"
+                android:enabled="false"
                 android:textAllCaps="false"
                 android:textStyle="bold"
                 app:cornerRadius="30dp"
@@ -84,6 +85,7 @@
                     android:id="@+id/etMobileNum"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:inputType="number"
                     android:layout_marginRight="10dp"
                     android:backgroundTint="#03d290" />
             </LinearLayout>
@@ -108,7 +110,7 @@
                 android:layout_marginStart="4dp"
                 android:text="I accept the Term and Conditions"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/materialButton"
+                app:layout_constraintBottom_toTopOf="@+id/btnLoginContinue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/llMobileNum" />
 
@@ -121,7 +123,7 @@
                 android:text="View T&amp;C"
                 android:textColor="#03d290"
                 android:textSize="17dp"
-                app:layout_constraintBottom_toTopOf="@+id/materialButton"
+                app:layout_constraintBottom_toTopOf="@+id/btnLoginContinue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/checkBox"
                 app:layout_constraintTop_toBottomOf="@+id/llMobileNum" />
