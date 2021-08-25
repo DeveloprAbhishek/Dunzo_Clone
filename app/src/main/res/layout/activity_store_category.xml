@@ -133,6 +133,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvBottomStorename"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -142,6 +143,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvBottomStoreOwner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -150,6 +152,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvBottomStoreAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
