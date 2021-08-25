@@ -13,7 +13,7 @@ class Product_ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         itemView.apply {
             tvProductName.text = productList.product_name
             tvProductDesc.text = productList.product_desc
-            tvProductPrice.text = productList.price
+            tvProductPrice.text = productList.price.toString()
 
             Glide.with(ivProductImage).load(productList.image_url).into(ivProductImage)
         }

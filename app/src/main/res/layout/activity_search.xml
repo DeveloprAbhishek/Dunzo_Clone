@@ -25,20 +25,16 @@
             app:tint="#404040"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-        <EditText
-            android:id="@+id/etSearchBar"
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginTop="@dimen/dp_12"
             android:layout_toEndOf="@+id/ibBackButton"
             android:background="@drawable/store_searchbar_back"
-            android:drawablePadding="@dimen/dp_7"
-            android:hint="Search for an item in Dunzo"
-            android:inputType="text"
-            android:textColorHint="#cccccc"
-            android:textSize="@dimen/sp_15"
-            app:drawableStartCompat="@drawable/ic_search_24" />
+            android:clickable="true"
+            android:textSize="@dimen/sp_15" />
     </RelativeLayout>
 
     <LinearLayout
@@ -149,10 +145,9 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/dp_7"
-        android:background="@color/white"
-        android:orientation="vertical" />
+        android:layout_marginTop="@dimen/dp_7" />
 </LinearLayout>
