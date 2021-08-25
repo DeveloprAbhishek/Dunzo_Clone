@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
         <activity
+            android:name=".Activities.SearchActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activities.OrderDetailsActivity"
             android:exported="true" />
         <activity
