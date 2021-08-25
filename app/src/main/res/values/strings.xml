@@ -25,4 +25,15 @@
     <string name="search_for_your_location">Search for your location</string>
     <string name="or">OR</string>
     <string name="use_current_location">Use current location</string>
+
+    <string name="tirupati_vegetables_and_fruit_market">Tirupati Vegetables And Fruit Market</string>
+    <string name="fresh_fruits">Fresh Fruits</string>
+    <string name="enter_search_for_item">Enter Search For item</string>
+    <string name="rasta_pet">Rasta Pet</string>
+    <string name="_270">₹270</string>
+    <string name="view_all">View All</string>
+    <string name="best_sellers">Best Sellers</string>
+    <string name="tirupati_vegetables_and_fruit_market">Tirupati Vegetables And Fruit Market</string>
+    <string name="tirupati_farsan_fruits_and">Tirupati farsan fruits and vegetable market</string>
+    <string name="tirupati_address">Shop No 4 ground floor, Sampada Nagari, Next to Shedge Dairy, 307, Somwar Peth, Pune-411011</string>
 </resources>
