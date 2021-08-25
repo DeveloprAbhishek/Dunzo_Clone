@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvCartitemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:drawablePadding="20dp"
+        android:text="Onion"
+        app:drawableLeftCompat="@drawable/circle_dot" />
+
+    <TextView
+        android:id="@+id/tvCartItemWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:text="@string/_1_kg"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@+id/tvCartitemName"
+        android:textColor="@color/lightgreen"
+        app:drawableRightCompat="@drawable/ic_arrow_down"
+        />
+    <TextView
+        android:id="@+id/tvCartItemPrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:text="@string/_270"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="15dp"
+        app:strokeColor="@color/grey"
+        android:layout_toStartOf="@+id/tvCartItemPrise"
+        app:strokeWidth="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:id="@+id/ivaddbtn"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_horizontal_rule_24"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/darkgreen"/>
+            <TextView
+                android:id="@+id/tvCartItemQty"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/darkgreen"/>
+            <ImageView
+                android:id="@+id/ivRemovebtn"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/darkgreen"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</RelativeLayout>

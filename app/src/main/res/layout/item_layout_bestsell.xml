@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/lightgreen"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivBestproduct"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/item_apple" />
+
+        <TextView
+            android:id="@+id/tvBestProductname"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivBestproduct"
+            android:layout_margin="10dp"
+            android:text="@string/apple_royal_gala"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBestProdQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBestProductname"
+            android:layout_marginVertical="5dp"
+            android:text="@string/_1_kg"
+            app:drawableRightCompat="@drawable/ic_arrow_down" />
+
+        <TextView
+            android:id="@+id/tvBestProdPrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBestProdQty"
+            android:layout_margin="10dp"
+            android:layout_marginVertical="5dp"
+            android:text="@string/_270"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivAdditem2"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/tvBestProdQty"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/add_btn"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

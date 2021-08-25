@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "806901242906",
+    "project_id": "dunzo-clone-a46bf",
+    "storage_bucket": "dunzo-clone-a46bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806901242906:android:20b06f4b132d4e3b3c85a3",
+        "android_client_info": {
+          "package_name": "com.example.dunzoclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806901242906-ns5dthkcsp61gkc2ta26qpbm7b74j2ss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGpflOZ46Oollomy-BzuyKEfNfkWV_46Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806901242906-ns5dthkcsp61gkc2ta26qpbm7b74j2ss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

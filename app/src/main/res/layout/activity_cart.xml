@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <ImageView
+        android:id="@+id/ivBackbtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:src="@drawable/ic_back_arrow" />
+
+
+    <TextView
+        android:id="@+id/tvConfirmOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/ivBackbtn3"
+        android:text="Confirm Order"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvConfirmOrder">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclercart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#fffdf1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/checkBoxOrder"
+                    android:buttonTint="@color/lightgreen"
+                    android:layout_width="match_parent"
+                    android:text="No Contact Delivery"
+                    android:paddingLeft="15dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="15dp"
+                    android:text="@string/No_ContactDelivery"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:background="@color/grey" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/partener_tip"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tvPaymentDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAYMENT DETAILS" />
+
+                <TextView
+                    android:id="@+id/itemTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPaymentDetail"
+                    android:layout_marginTop="25dp"
+                    android:text="Item total" />
+
+                <TextView
+                    android:id="@+id/tvitemTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPaymentDetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="25dp"
+                    android:text="₹270" />
+
+                <View
+                    android:id="@+id/viewLine4"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/itemTotal"
+                    android:layout_marginVertical="4dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/PartenerFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewLine4"
+                    android:text="Partner delivery fee" />
+
+                <TextView
+                    android:id="@+id/tvPartenerfee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewLine4"
+                    android:layout_alignParentEnd="true"
+                    android:text="Free"
+                    android:textColor="@color/lightgreen" />
+
+                <View
+                    android:id="@+id/viewLine5"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/PartenerFee"
+                    android:layout_marginVertical="4dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/toPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewLine5"
+                    android:text="To Pay"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvToPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewLine5"
+                    android:layout_alignParentEnd="true"
+                    android:text="₹270" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewLine6"
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:background="@color/grey" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
