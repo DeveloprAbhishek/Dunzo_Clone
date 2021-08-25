@@ -10,10 +10,10 @@ class BestSellerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun setBestSellerData(bestSellerlist : BestSellerModel){
         itemView.apply {
-            Glide.with(ivBestproduct).load(bestSellerlist.pro_image_url).into(ivBestproduct)
-            tvBestProductname.text = bestSellerlist.pro_name
-            tvBestProdPrise.text = bestSellerlist.pro_price
-            tvBestProdQty.text = bestSellerlist.pro_quantity
+            Glide.with(ivBestproduct).load(bestSellerlist.item_img_url).into(ivBestproduct)
+            tvBestProductname.text = bestSellerlist.item_name
+            tvBestProdPrise.text = bestSellerlist.item_price
+            tvBestProdQty.text = bestSellerlist.item_quantity
         }
 
     }

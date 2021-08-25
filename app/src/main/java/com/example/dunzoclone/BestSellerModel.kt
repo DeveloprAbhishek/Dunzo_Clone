@@ -1,18 +1,18 @@
 package com.example.dunzoclone
 
 class BestSellerModel {
-    var pro_image_url : String
-    val pro_name : String
-    var pro_quantity : String
-    var pro_price : String
+    var item_img_url : String
+    val item_name : String
+    var item_quantity : String
+    var item_price : String
 
 
     constructor( image_url: String, product_name: String, quantity: String, price: String
     ) {
-        pro_image_url = image_url
-        pro_name = product_name
-        pro_quantity = quantity
-        pro_price = price
+        item_img_url = image_url
+        item_name = product_name
+        item_quantity = quantity
+        item_price = price
     }
 
 }
