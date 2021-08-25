@@ -4,11 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.dunzoclone.DataModels.User
 import com.example.dunzoclone.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_verify_mobile.*
 import java.util.concurrent.TimeUnit
@@ -80,12 +82,23 @@ class VerifyMobileActivity : AppCompatActivity() {
             .addOnCompleteListener(OnCompleteListener<AuthResult>() {
                 if (it.isSuccessful) {
                     Toast.makeText(this@VerifyMobileActivity, "Otp verification Successful", Toast.LENGTH_LONG).show()
+
+                    auth.currentUser?.let { it1 ->
+                        addUserDetailsToDatabase(it1.uid)
+                    }
                     val intent = Intent(this@VerifyMobileActivity, HomeActivity::class.java)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this@VerifyMobileActivity, "FAIL", Toast.LENGTH_LONG).show()
                 }
             })
+
+    }
+
+    private fun addUserDetailsToDatabase(uid: String) {
+        val database = Firebase.database
+        val user = User(tvEnterOTP.text.toString(), uid)
+        database.getReference("users").child(uid).setValue(user)
 
     }
 

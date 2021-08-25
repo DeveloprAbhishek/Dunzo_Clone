@@ -1,21 +1,29 @@
 package com.example.dunzoclone.ViewHolders
 
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.dunzoclone.DataModels.Product_Model
+import com.example.dunzoclone.ClickLitener.ProductItemClickListener
+import com.example.dunzoclone.DataModels.ProductModel
 import kotlinx.android.synthetic.main.product_item_layout.view.*
 import kotlinx.android.synthetic.main.product_item_layout.view.ivProductImage
-import kotlinx.android.synthetic.main.store_item_layout.view.*
 
-class Product_ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-    fun setProductData(productList : Product_Model){
+class Product_ViewHolder(view: View, var productItemClickListener: ProductItemClickListener): RecyclerView.ViewHolder(view) {
+    fun setProductData(productList : ProductModel, position: Int){
         itemView.apply {
-            tvProductName.text = productList.product_name
-            tvProductDesc.text = productList.product_desc
+            tvProductName.text = productList.name
+            tvProductDesc.text = productList.quantity
             tvProductPrice.text = productList.price
+            Glide.with(ivProductImage).load(productList.image).into(ivProductImage)
 
-            Glide.with(ivProductImage).load(productList.image_url).into(ivProductImage)
+            tvButtonAdd.setOnClickListener {
+                productItemClickListener.onPlusButtonClick(productList, position)
+                Toast.makeText(context, "eusd", Toast.LENGTH_SHORT).show()
+            }
+        }
+        itemView.productCardView.setOnClickListener {
+            productItemClickListener.onItemClickListener(productList, position)
         }
     }
 }
