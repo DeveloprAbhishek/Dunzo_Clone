@@ -3,6 +3,7 @@
     package="com.example.dunzoclone">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,28 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
-        <activity
-            android:name=".Activities.LocationActivity"
-            android:exported="true" />
+
+        <activity android:name=".Activities.LocationActivity" />
         <activity android:name=".Activities.UserProfileActivity" />
         <activity android:name=".Activities.AdminActivity" />
-        <activity android:name=".Activities.HomeActivity" />
-        <activity android:name=".Activities.VerifyMobileActivity" />
-        <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.SplashScreen">
+        <activity android:name=".Activities.EmptyCartActivity"/>
+        <activity android:name=".Activities.ProductDetailActivity"/>
+
+        <activity android:name=".Activities.HomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.EmptyCartActivity"></activity>
-        <activity android:name=".Activities.ProductDetailActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Activities.VerifyMobileActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Activities.SplashScreen">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
 

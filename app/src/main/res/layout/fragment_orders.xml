@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#038352"
     android:orientation="vertical"
-    tools:context=".Activities.EmptyOrderScreen">
+    tools:context=".Fragments.OrdersFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -24,11 +24,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/empty_order" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_order" />
     </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

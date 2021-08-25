@@ -18,10 +18,13 @@ import kotlinx.android.synthetic.main.activity_splash_screen.*
 import android.util.DisplayMetrics
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import com.google.firebase.auth.FirebaseAuth
 import java.lang.Exception
 
 
 class SplashScreen : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(1)
