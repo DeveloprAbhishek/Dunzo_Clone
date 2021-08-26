@@ -12,8 +12,9 @@
         android:id="@+id/ivProductImage"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/prateek"
+        android:src="@drawable/strawberries"
         android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@id/middleLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,18 +28,18 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivProductImage"
-        app:layout_constraintEnd_toStartOf="@id/tvButtonAdd"
+        app:layout_constraintEnd_toStartOf="@id/lastLayout"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tvProductName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_12"
             android:text="Xpress Mart"
             android:ellipsize="end"
             android:textColor="@color/black"
-            android:textSize="@dimen/dp_18"
+            android:textSize="@dimen/sp_18"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/ivProductImage"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +48,7 @@
             android:id="@+id/tvProductDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_12"
             android:maxLines="2"
             android:ellipsize="end"
             android:text="Garlic (250 Gms) + Ginger (100 Gms)"
@@ -58,40 +59,96 @@
             android:id="@+id/tvQuantitySelector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_12"
-            android:drawableEnd="@drawable/ic_arrow_down"
+            android:layout_marginStart="@dimen/dp_12"
             android:text="4 items"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
             app:layout_constraintStart_toEndOf="@id/ivProductImage" />
 
         <TextView
             android:id="@+id/tvProductPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_12"
             android:text="₹ 70"
             app:layout_constraintStart_toEndOf="@id/ivProductImage"
             app:layout_constraintTop_toBottomOf="@+id/tvQuantitySelector" />
     </LinearLayout>
 
-
-    <TextView
-        android:id="@+id/tvButtonAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_7"
-        android:background="@drawable/button_add_background"
-        android:drawableStart="@drawable/ic_plus_add"
-        android:padding="7dp"
-        android:gravity="center"
-        android:drawablePadding="@dimen/dp_7"
-        android:text="ADD"
-        android:textColor="@color/light_green"
-        android:textStyle="bold"
+    <RelativeLayout
+        android:id="@+id/lastLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/middleLayout"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
 
+        <TextView
+            android:id="@+id/tvButtonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_7"
+            android:background="@drawable/button_add_background"
+            android:drawablePadding="@dimen/dp_7"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="ADD"
+            android:textColor="@color/light_green"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:drawableStartCompat="@drawable/ic_plus_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginStart="@dimen/dp_7"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginEnd="@dimen/dp_7"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dp_7"
+            android:background="@drawable/button_add_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_7">
+
+            <ImageView
+                android:id="@+id/ivButtonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_horizontal_rule_24"
+                android:textColor="@color/darkgreen"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCartItemQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivButtonRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_add_24"
+                android:textColor="@color/light_green"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

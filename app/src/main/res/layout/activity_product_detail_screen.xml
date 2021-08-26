@@ -89,7 +89,7 @@
 
 
                     <ImageView
-                        android:id="@+id/ivaddbtn"
+                        android:id="@+id/ivButtonAdd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -109,7 +109,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/ivRemovebtn"
+                        android:id="@+id/ivButtonRemove"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
