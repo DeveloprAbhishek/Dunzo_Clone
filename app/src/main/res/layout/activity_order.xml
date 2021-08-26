@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_green"
-
     tools:context=".Activities.OrderActivity">
 
     <RelativeLayout
@@ -74,6 +73,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/orderRecyclerView"
                 android:layout_width="match_parent"
+                tools:listitem="@layout/order_item_layout"
                 android:layout_height="match_parent"/>
         </LinearLayout>
 

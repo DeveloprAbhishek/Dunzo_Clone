@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DunzoClone" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.DunzoClone" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/darkgreen</item>
         <item name="colorPrimaryVariant">@color/darkgreen</item>
