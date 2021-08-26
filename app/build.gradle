@@ -3,11 +3,15 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
+    buildFeatures{
+        dataBinding true
+    }
 
     defaultConfig {
         applicationId "com.example.dunzoclone"

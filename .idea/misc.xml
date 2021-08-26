@@ -53,15 +53,19 @@
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_map.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_order.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_order_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_product.xml" value="0.2" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_product.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_search.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_search2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_search_actvity_kt.xml" value="0.2" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_splash_screen.xml" value="0.16" />
-        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_store_category.xml" value="0.4" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_store_category.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_stores.xml" value="0.264" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_test.xml" value="0.17777777777777778" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/activity_verify_mobile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/fragment_dunzo_cash.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/fragment_orders.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/fragment_search.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/item_layout_bestsell.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/item_layout_cart_order.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/layout/item_layout_store_cat.xml" value="0.25416666666666665" />
