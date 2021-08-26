@@ -100,19 +100,22 @@
         android:visibility="gone"
         android:orientation="horizontal">
         <TextView
+            android:id="@+id/tvItemTotalQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1 Item"
             android:layout_weight="1"
             android:drawableLeft="@drawable/ic_baseline_shopping_cart"/>
+
         <TextView
+            android:id="@+id/tvItemTotalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="60"/>
 
         <Button
-            android:id="@+id/btnCardBtn"
+            android:id="@+id/btnToGOCartPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

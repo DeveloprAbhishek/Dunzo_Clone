@@ -6,7 +6,7 @@ class ProductModel(
     var description: String ="",
     var quantity: String ="",
     var price: String = "",
-    var isProductAddedToCart: Boolean = false
+    var isproductaddedtocart: String = ""
 ) {
 
 }
