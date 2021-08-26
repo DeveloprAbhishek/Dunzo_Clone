@@ -6,15 +6,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dunzoclone.ClickLitener.ProductItemClickListener
 import com.example.dunzoclone.DataModels.ProductModel
 import com.example.dunzoclone.R
-import com.example.dunzoclone.ViewHolders.Product_ViewHolder
+import com.example.dunzoclone.ViewHolders.ProductViewHolder
 
-class ProductAdapter(private val productList: List<ProductModel>, var productItemClickListener: ProductItemClickListener) : RecyclerView.Adapter<Product_ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Product_ViewHolder {
+class ProductAdapter(private val productList: List<ProductModel>, var productItemClickListener: ProductItemClickListener) : RecyclerView.Adapter<ProductViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.product_item_layout, parent, false)
-        return Product_ViewHolder(view, productItemClickListener)
+        return ProductViewHolder(view, productItemClickListener)
     }
 
-    override fun onBindViewHolder(holder: Product_ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product : ProductModel = productList[position]
         holder.setProductData(product, position)
     }

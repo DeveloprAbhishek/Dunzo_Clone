@@ -1,8 +1,8 @@
-package com.example.dunzoclone.ViewHolder
+package com.example.dunzoclone.ViewHolders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dunzoclone.CartModel
+import com.example.dunzoclone.DataModels.CartModel
 import kotlinx.android.synthetic.main.item_layout_cart_order.view.*
 
 class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

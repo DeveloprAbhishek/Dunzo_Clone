@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.dunzoclone.Adapters.ProductAdapter
@@ -100,18 +101,40 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
         startActivity(intent)
     }
 
-    override fun onPlusButtonClick(productModel: ProductModel, storePosition: Int) {
-        addDataToCart(productModel)
+    override fun onAddButtonClick(productModel: ProductModel, storePosition: Int) {
+        addDataToCart(productModel, storePosition)
         bottomBar.visibility = View.VISIBLE
     }
 
-    private fun addDataToCart(productModel: ProductModel) {
-        var userId = auth.currentUser?.uid
+    override fun onPlusButtonClick(productModel: ProductModel, storePosition: Int) {
+
+    }
+
+    override fun onMinusButtonClick(productModel: ProductModel, storePosition: Int) {
+        val userId = auth.currentUser?.uid
         val database = Firebase.database
-        database.getReference("df").child("sdf").push()
-        var cartRef = userId?.let { database.getReference("users").child(it).child("cartItem") }
-        if (cartRef != null) {
-            cartRef.push().setValue(productModel)
+        val cartRef = userId?.let {
+            database.getReference("users").child(it).child("cartItem").addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    Log.d("abhishek", snapshot.toString())
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    onShowToastMessage("Error While clicking minus button!")
+                }
+
+            })
         }
+    }
+
+    private fun addDataToCart(productModel: ProductModel, position: Int) {
+        val userId = auth.currentUser?.uid
+        val database = Firebase.database
+        val cartRef = userId?.let { database.getReference("users").child(it).child("cartItem") }
+        cartRef?.child(position.toString())?.setValue(productModel)
+    }
+
+    fun onShowToastMessage(str: String) {
+        Toast.makeText(this@ProductActivity, str, Toast.LENGTH_SHORT).show()
     }
 }

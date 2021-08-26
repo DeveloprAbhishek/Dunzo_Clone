@@ -1,4 +1,4 @@
-package com.example.dunzoclone
+package com.example.dunzoclone.DataModels
 
 class BestSellerModel {
     var item_img_url : String

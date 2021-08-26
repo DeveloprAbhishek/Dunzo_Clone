@@ -9,7 +9,7 @@ import com.example.dunzoclone.DataModels.ProductModel
 import kotlinx.android.synthetic.main.product_item_layout.view.*
 import kotlinx.android.synthetic.main.product_item_layout.view.ivProductImage
 
-class Product_ViewHolder(view: View, var productItemClickListener: ProductItemClickListener): RecyclerView.ViewHolder(view) {
+class ProductViewHolder(view: View, var productItemClickListener: ProductItemClickListener): RecyclerView.ViewHolder(view) {
     fun setProductData(productList : ProductModel, position: Int){
         itemView.apply {
             tvProductName.text = productList.name
@@ -18,8 +18,17 @@ class Product_ViewHolder(view: View, var productItemClickListener: ProductItemCl
             Glide.with(ivProductImage).load(productList.image).into(ivProductImage)
 
             tvButtonAdd.setOnClickListener {
-                productItemClickListener.onPlusButtonClick(productList, position)
-                Toast.makeText(context, "eusd", Toast.LENGTH_SHORT).show()
+                cvProductAdd.visibility = View.VISIBLE
+                tvButtonAdd.visibility = View.GONE
+                productItemClickListener.onAddButtonClick(productList, position)
+            }
+
+            ivButtonAdd.setOnClickListener {
+                productItemClickListener.onAddButtonClick(productList, position)
+            }
+
+            ivButtonRemove.setOnClickListener {
+                productItemClickListener.onMinusButtonClick(productList, position)
             }
         }
         itemView.productCardView.setOnClickListener {

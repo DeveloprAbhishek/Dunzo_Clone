@@ -7,6 +7,7 @@
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/default_pager_dot.xml" value="0.290625" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/tab_pager.xml" value="0.290625" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_admin.xml" value="0.18177083333333333" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_cart.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_empty_cart.xml" value="0.18177083333333333" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_empty_order_screen.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
@@ -22,7 +23,7 @@
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_orders.xml" value="0.18854166666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_search.xml" value="0.18854166666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/item_layout_store_cat.xml" value="0.14166666666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/product_item_layout.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/product_item_layout.xml" value="0.264" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/store_item_layout.xml" value="0.264" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/menu/bottom_menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/RX-S7/AndroidStudioProjects/Dunzo_Clone/app/src/main/res/drawable/ic_arrow_back.xml" value="0.22037037037037038" />
