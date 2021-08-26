@@ -129,12 +129,13 @@
                 android:layout_below="@id/recyclerviewStoreCategory"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="10dp"
-                android:background="@color/grey"
+                android:background="#f2f2f2"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvBottomStorename"
                     android:layout_width="match_parent"
+                    android:padding="@dimen/dp_7"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/tirupati_vegetables_and_fruit_market"

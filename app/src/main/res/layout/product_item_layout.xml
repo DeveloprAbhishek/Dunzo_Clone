@@ -12,7 +12,7 @@
         android:id="@+id/ivProductImage"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/prateek"
+        android:src="@drawable/strawberries"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toStartOf="@id/middleLayout"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,7 +114,6 @@
             android:layout_marginTop="@dimen/dp_7"
             android:layout_marginEnd="@dimen/dp_7"
             android:visibility="gone"
-            android:id="@+id/cvProductAdd"
             android:layout_marginBottom="@dimen/dp_7"
             android:background="@drawable/button_add_background"
             android:gravity="center_vertical"
@@ -122,7 +121,7 @@
             android:padding="@dimen/dp_7">
 
             <ImageView
-                android:id="@+id/ivButtonRemove"
+                android:id="@+id/ivButtonAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -137,12 +136,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="1"
-                android:focusable="false"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/ivButtonAdd"
+                android:id="@+id/ivButtonRemove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

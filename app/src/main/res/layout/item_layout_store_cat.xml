@@ -11,15 +11,15 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivStore_cate"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        app:shapeAppearanceOverlay="@style/roundedCorners"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
         android:src="@drawable/store_pineapple"
+        app:shapeAppearanceOverlay="@style/roundedCorners"
         android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/tvStore_cate"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="3dp"

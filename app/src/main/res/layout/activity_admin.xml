@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_12"
-                android:padding="@dimen/dp_7">
+               >
 
                 <TextView
                     android:id="@+id/tvAdminName"
@@ -37,7 +37,7 @@
                     android:background="@color/white"
                     android:text="@string/hey_there"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/sp_24"
+                    android:textSize="@dimen/sp_20"
                     android:textStyle="bold" />
 
                 <TextView
@@ -46,10 +46,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
                     android:text="@string/edit"
-                    android:textColor="@color/light_green"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+                    android:textColor="#00b33c"
+                    android:textSize="13sp"
                     app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
                     tools:ignore="RelativeOverlap" />
 
@@ -58,8 +58,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
                 android:orientation="horizontal"
-                android:padding="@dimen/dp_4"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
@@ -76,23 +76,24 @@
                     android:text="@string/phone_num_dummy"
                     android:textAlignment="textEnd"
                     android:textColor="#b3b3b3"
-                    android:textSize="@dimen/sp_18" />
+                    android:textSize="@dimen/sp_15" />
             </LinearLayout>
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/dp_7"
         android:scrollbarSize="0dp"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/white"
             android:orientation="vertical">
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvRecentOrders"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -100,13 +101,13 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/recent_orders"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_cart" />
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvPayTm"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -114,13 +115,13 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/paytm"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_paytm_icon" />
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvSavedAddress"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -128,13 +129,13 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/saved_address"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_location_svgrepo_com_2_" />
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvSavedCards"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -142,13 +143,13 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/saved_cards"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_credit_cards" />
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvReferAPartner"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -156,13 +157,13 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/refer_a_partner"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_helmet_partner" />
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvNotificationSettings"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -170,13 +171,13 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/notification_settings"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_notification" />
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvSupport"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -184,13 +185,13 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/support"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_help_svgrepo_com" />
 
             <TextView
+                android:gravity="center_vertical"
                 android:id="@+id/tvInfo"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70"
@@ -198,9 +199,8 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_18"
                 android:text="@string/about"
-                android:textAlignment="gravity"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_15"
                 app:drawableEndCompat="@drawable/ic_chevron_right_arrow"
                 app:drawableStartCompat="@drawable/ic_info" />
 
@@ -208,9 +208,9 @@
                 android:id="@+id/tvVersionNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/dp_18"
+                android:padding="@dimen/sp_15"
                 android:text="@string/version_number"
-                android:textColor="@color/light_grey_1" />
+                android:textColor="@color/visible_grey" />
         </LinearLayout>
     </ScrollView>
 
