@@ -1,16 +1,16 @@
 package com.example.dunzoclone.DataModels
 
 class Order_Model {
-    var Order_image_url : String
-    val product_category : String
-    var order_date : String
-    var order_time : String
-    var store_name : String
-    var store_address : String
-    var customer_address : String
-    var customer_sub_address : String
-    var product_quantity : String
-    var order_price : String
+    var Order_image_url: String
+    val product_category: String
+    var order_date: String
+    var order_time: String
+    var store_name: String
+    var store_address: String
+    var customer_address: String
+    var customer_sub_address: String
+    var product_quantity: String
+    var order_price: String
 
     constructor(
         Order_image_url: String,

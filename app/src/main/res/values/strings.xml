@@ -45,4 +45,7 @@
     <string name="_01_level_14_ub_city_ashok_nagar_bangalore">01,Level 14, UB City, Ashok Nagar,Bangalore</string>
     <string name="orders">Orders</string>
     <string name="active_orders">Active Orders</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="payment_details">PAYMENT DETAILS</string>
+    <string name="onion">Onion</string>
 </resources>

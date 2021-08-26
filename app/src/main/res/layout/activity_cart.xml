@@ -10,7 +10,7 @@
         android:id="@+id/ivBackbtn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_margin="24dp"
         android:src="@drawable/ic_back_arrow" />
 
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_toEndOf="@+id/ivBackbtn3"
-        android:text="Confirm Order"
+        android:text="@string/confirm_order"
         android:textColor="@color/black"
         android:textSize="23sp"
         android:textStyle="bold" />
@@ -32,7 +32,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -88,7 +88,7 @@
                     android:id="@+id/tvPaymentDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PAYMENT DETAILS" />
+                    android:text="@string/payment_details" />
 
                 <TextView
                     android:id="@+id/itemTotal"
