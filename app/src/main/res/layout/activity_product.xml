@@ -48,11 +48,9 @@
             android:layout_marginTop="@dimen/dp_12"
             android:padding="@dimen/dp_7">
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/ivPCImage"
                 android:layout_width="50dp"
-                android:src="@drawable/prateek"
-                app:shapeAppearanceOverlay="@style/roundedCorners"
                 android:layout_height="50dp"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -67,13 +65,12 @@
                 android:layout_marginLeft="@dimen/dp_12"
                 android:text="Fresh Vegetables"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/dp_22"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivPCImage"
-                app:layout_constraintBottom_toTopOf="@id/tvStoreName"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpUsage" />
-
 
             <TextView
                 android:id="@+id/tvStoreName"
@@ -81,8 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_12"
                 android:text="Xpress Mart"
-                android:textSize="12sp"
-                android:textColor="@color/visible_grey"
+                android:textColor="@color/light_green"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivPCImage"
                 app:layout_constraintTop_toBottomOf="@+id/tvPCName" />
@@ -92,59 +88,34 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
         android:layout_above="@id/bottomBar"
-        android:layout_below="@id/topBar" />
+        android:layout_height="match_parent" />
 
-    <RelativeLayout
-        android:id="@+id/bottomBar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingTop="@dimen/dp_7"
-        android:paddingBottom="@dimen/dp_7"
-        android:paddingEnd="@dimen/dp_12"
-        android:paddingStart="@dimen/dp_12"
-        android:visibility="visible">
-
+        android:id="@+id/bottomBar"
+        android:visibility="gone"
+        android:orientation="horizontal">
         <TextView
-            android:id="@+id/tvItemTotalQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:drawableLeft="@drawable/ic_shopping_cart"
-            android:drawablePadding="@dimen/dp_7"
-            android:gravity="center_vertical"
-            android:padding="@dimen/dp_12"
             android:text="1 Item"
-            android:layout_weight="1"/>
-
-            android:textColor="@color/black" />
-
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_baseline_shopping_cart"/>
         <TextView
-            android:id="@+id/tvItemTotalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/tvItemTotalQuantity"
-            android:padding="@dimen/dp_12"
-            android:text="₹ 25"
-            android:textColor="@color/light_green"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:text="60"/>
 
         <Button
-            android:id="@+id/btnToGOCartPage"
+            android:id="@+id/btnCardBtn"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/view_cart_custom_layout"
-            android:paddingStart="@dimen/dp_22"
-            android:paddingEnd="@dimen/dp_22"
-            android:text="View Cart"
-            android:textColor="@color/white"
-            android:textSize="@dimen/dp_12" />
-    </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View Cart"/>
+    </LinearLayout>
 </RelativeLayout>
