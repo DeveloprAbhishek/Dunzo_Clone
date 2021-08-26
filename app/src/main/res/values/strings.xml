@@ -45,4 +45,13 @@
     <string name="_01_level_14_ub_city_ashok_nagar_bangalore">01,Level 14, UB City, Ashok Nagar,Bangalore</string>
     <string name="orders">Orders</string>
     <string name="active_orders">Active Orders</string>
+    <string name="title_activity_map">MapActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

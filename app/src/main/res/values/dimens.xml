@@ -17,4 +17,5 @@
     <dimen name="dp_15">15dp</dimen>
     <dimen name="dp_110">110dp</dimen>
     <dimen name="sp_24">24sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
