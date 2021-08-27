@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
+import android.widget.ViewFlipper
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import com.example.dunzoclone.Activities.AdminActivity
 import com.example.dunzoclone.Activities.EmptyCartActivity
 import com.example.dunzoclone.Activities.LocationActivity
@@ -21,32 +23,20 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
+
+        var viewPager = (R.id.viewPager) as ViewPager2
+
+
+        //show_vf_images()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        var vfImages =
-            intArrayOf(R.drawable.vf1, R.drawable.vf2, R.drawable.vf3, R.drawable.vf4)
-
-        for (vf_image :Int in vfImages)
-        {
-            show_vf_images(vf_image)
-        }
-        return super.onCreateView(inflater, container, savedInstanceState)
-
-
-
-    }
 
     private fun initViews() {
         //Toolbar Views
         ivToolbarProfile.setOnClickListener(this)
         ivToolbarCart.setOnClickListener(this)
         tvToolbarLocation.setOnClickListener(this)
+
 
         //Categories Views
         ivFruits.setOnClickListener(this)
@@ -92,14 +82,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
     }
 
 
-     fun show_vf_images(vf_image: Int) {
-
-        val imageView = ImageView(context)
-        imageView.setBackgroundResource(vf_image)
-        viewFlipper.addView(imageView)
-         viewFlipper.flipInterval = 3000
-         viewFlipper.isAutoStart = true
-        viewFlipper.setInAnimation(context, android.R.anim.slide_in_left)
-        viewFlipper.setOutAnimation(context, android.R.anim.slide_out_right)
-    }
+//     fun show_vf_images() {
+//
+//         view_Flipper.flipInterval = 3000
+//         view_Flipper.isAutoStart = true
+//         view_Flipper.startFlipping()
+//         view_Flipper.setInAnimation(context,R.anim.flip_in)
+//         view_Flipper.setOutAnimation(context,R.anim.flip_out)
+//    }
 }

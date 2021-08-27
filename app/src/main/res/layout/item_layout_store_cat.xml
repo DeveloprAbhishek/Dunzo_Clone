@@ -13,6 +13,7 @@
         android:id="@+id/ivStore_cate"
         android:layout_width="@dimen/dp_90"
         android:layout_height="@dimen/dp_90"
+        app:shapeAppearanceOverlay="@style/roundedCorners"
         android:src="@drawable/store_pineapple"
         android:scaleType="fitXY"/>
 
