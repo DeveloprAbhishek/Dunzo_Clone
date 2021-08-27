@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartActivity">
+    tools:context=".Activities.CartActivity">
 
     <ImageView
-        android:id="@+id/ivBackbtn3"
+        android:id="@+id/ivBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
         android:src="@drawable/ic_back_arrow" />
 
 
@@ -19,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_toEndOf="@+id/ivBackbtn3"
+        android:layout_toEndOf="@+id/ivBack"
         android:text="Confirm Order"
         android:textColor="@color/black"
         android:textSize="23sp"
@@ -36,7 +39,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclercart"
+                android:id="@+id/recyclerCart"
                 android:layout_width="match_parent"
                 tools:listitem="@layout/item_layout_cart_order"
                 android:layout_height="wrap_content"

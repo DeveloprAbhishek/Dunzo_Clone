@@ -1,4 +1,4 @@
-package com.example.dunzoclone.ViewHolder
+package com.example.dunzoclone.ViewHolders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

@@ -33,5 +33,4 @@ class ProductDetailActivity : AppCompatActivity() {
         Glide.with(ivItemImage).load(intent.getStringExtra("productImage")).into(ivItemImage)
     }
 
-
 }

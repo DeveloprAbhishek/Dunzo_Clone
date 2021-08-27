@@ -106,10 +106,10 @@
         android:paddingBottom="@dimen/dp_7"
         android:paddingEnd="@dimen/dp_12"
         android:paddingStart="@dimen/dp_12"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <TextView
-            android:id="@+id/shoppingCart"
+            android:id="@+id/tvCartItemQty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -121,10 +121,11 @@
             android:textColor="@color/black" />
 
         <TextView
+            android:id="@+id/tvCartPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/shoppingCart"
+            android:layout_toEndOf="@+id/tvCartItemQty"
             android:padding="@dimen/dp_12"
             android:text="₹ 25"
             android:textColor="@color/light_green"

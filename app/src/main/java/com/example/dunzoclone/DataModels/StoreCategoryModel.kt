@@ -1,4 +1,4 @@
-package com.example.dunzoclone
+package com.example.dunzoclone.DataModels
 
 class StoreCategoryModel {
     var category_img_url : String

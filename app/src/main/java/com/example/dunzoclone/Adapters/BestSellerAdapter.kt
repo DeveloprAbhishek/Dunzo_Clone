@@ -1,11 +1,11 @@
-package com.example.dunzoclone.Adapter
+package com.example.dunzoclone.Adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dunzoclone.BestSellerModel
+import com.example.dunzoclone.DataModels.BestSellerModel
 import com.example.dunzoclone.R
-import com.example.dunzoclone.ViewHolder.BestSellerViewHolder
+import com.example.dunzoclone.ViewHolders.BestSellerViewHolder
 
 class BestSellerAdapter(private val bestSellerlist: List<BestSellerModel>) : RecyclerView.Adapter<BestSellerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestSellerViewHolder {
