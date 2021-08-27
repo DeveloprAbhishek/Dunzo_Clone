@@ -5,7 +5,8 @@ class ProductModel(
     var name: String ="",
     var description: String ="",
     var quantity: String ="",
-    var price: String = ""
+    var price: String = "",
+    var isproductaddedtocart: String = ""
 ) {
 
 }

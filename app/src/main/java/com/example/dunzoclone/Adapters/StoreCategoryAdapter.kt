@@ -1,4 +1,4 @@
-package com.example.dunzoclone.Adapter
+package com.example.dunzoclone.Adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dunzoclone.ClickLitener.StoreCatItemClickListener
 import com.example.dunzoclone.DataModels.ProductCategory
 import com.example.dunzoclone.R
-import com.example.dunzoclone.ViewHolder.StoreCategoryViewHolder
+import com.example.dunzoclone.ViewHolders.StoreCategoryViewHolder
 import java.util.ArrayList
 
 class StoreCategoryAdapter(

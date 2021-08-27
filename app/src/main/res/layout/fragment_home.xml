@@ -106,17 +106,23 @@
                         android:orientation="horizontal"
                         android:weightSum="2">
 
-                        <ImageView
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/ivGroceries"
                             android:layout_width="wrap_content"
                             android:layout_height="130dp"
+                            android:layout_margin="@dimen/dp_7"
+                            android:scaleType="fitXY"
+                            app:shapeAppearanceOverlay="@style/roundedCorners"
                             android:layout_weight="1"
                             android:src="@drawable/groceries" />
 
-                        <ImageView
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/ivMeat"
                             android:layout_width="wrap_content"
                             android:layout_height="130dp"
+                            android:layout_margin="@dimen/dp_7"
+                            android:scaleType="fitXY"
+                            app:shapeAppearanceOverlay="@style/roundedCorners"
                             android:layout_toRightOf="@id/ivGroceries"
                             android:layout_weight="1"
                             android:src="@drawable/meat" />
@@ -129,19 +135,25 @@
                         android:orientation="horizontal"
                         android:weightSum="2">
 
-                        <ImageView
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/ivFruits"
                             android:layout_width="wrap_content"
                             android:layout_height="130dp"
                             android:layout_weight="1"
+                            android:layout_margin="@dimen/dp_7"
+                            android:scaleType="fitXY"
+                            app:shapeAppearanceOverlay="@style/roundedCorners"
                             android:src="@drawable/fruits" />
 
-                        <ImageView
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/ivPickup"
                             android:layout_width="wrap_content"
                             android:layout_height="130dp"
                             android:layout_toRightOf="@id/ivFruits"
+                            android:layout_margin="@dimen/dp_7"
                             android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            app:shapeAppearanceOverlay="@style/roundedCorners"
                             android:src="@drawable/pickup" />
                     </LinearLayout>
                 </LinearLayout>
@@ -389,27 +401,35 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <ImageView
+                            <com.google.android.material.imageview.ShapeableImageView
                                 android:layout_width="250dp"
                                 android:layout_height="180dp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/roundedCorners"
                                 android:layout_marginLeft="20dp"
                                 android:src="@drawable/toppics_1" />
 
-                            <ImageView
+                            <com.google.android.material.imageview.ShapeableImageView
                                 android:layout_width="250dp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/roundedCorners"
                                 android:layout_height="180dp"
                                 android:layout_marginLeft="10dp"
                                 android:src="@drawable/toppics_2" />
 
-                            <ImageView
+                            <com.google.android.material.imageview.ShapeableImageView
                                 android:layout_width="250dp"
                                 android:layout_height="180dp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/roundedCorners"
                                 android:layout_marginLeft="10dp"
                                 android:src="@drawable/toppics_3" />
 
-                            <ImageView
+                            <com.google.android.material.imageview.ShapeableImageView
                                 android:layout_width="250dp"
                                 android:layout_height="180dp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/roundedCorners"
                                 android:layout_marginLeft="10dp"
                                 android:src="@drawable/toppics_4" />
                         </LinearLayout>
@@ -456,9 +476,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
+                    app:shapeAppearanceOverlay="@style/roundedCorners"
+
                     android:layout_marginVertical="20dp"
                     android:src="@drawable/img_assistent" />
             </androidx.cardview.widget.CardView>

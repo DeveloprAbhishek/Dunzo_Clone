@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.dunzoclone.Adapter.StoreCategoryAdapter
-import com.example.dunzoclone.Adapters.StoreListAdapter
+import com.example.dunzoclone.Adapters.StoreCategoryAdapter
 import com.example.dunzoclone.ClickLitener.StoreCatItemClickListener
 import com.example.dunzoclone.DataModels.ProductCategory
-import com.example.dunzoclone.DataModels.StoreListModel
 import com.example.dunzoclone.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

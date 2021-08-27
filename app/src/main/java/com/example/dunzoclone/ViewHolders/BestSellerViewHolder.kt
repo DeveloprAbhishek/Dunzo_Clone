@@ -1,9 +1,9 @@
-package com.example.dunzoclone.ViewHolder
+package com.example.dunzoclone.ViewHolders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.dunzoclone.BestSellerModel
+import com.example.dunzoclone.DataModels.BestSellerModel
 import kotlinx.android.synthetic.main.item_layout_bestsell.view.*
 
 class BestSellerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

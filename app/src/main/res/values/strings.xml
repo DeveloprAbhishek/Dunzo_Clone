@@ -7,7 +7,6 @@
     <string name="tvI_imp_guideline">The product image(s) shown are for representation purpose only. The actual product may vary. It is recommended to read the product labels (if any), batch details, directions for use, etc., as contained in the actual product before consuming and/or utilizing the product. The product is meant for fresh and immediate consumption, or as specified by the seller of the product. For other information, please contact the merchant directly.</string>
     <string name="important_information">Important Information</string>
     <string name="_1_kg">1 KG</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="edit">EDIT</string>
     <string name="version_number">Version 3.34.0.1</string>
@@ -19,7 +18,7 @@
     <string name="notification_settings">Notification settings</string>
     <string name="support">Support</string>
     <string name="about">About</string>
-    <string name="hey_there">Hey There!</string>
+    <string name="hey_there">Hey there!</string>
     <string name="phone_num_dummy">+914578124785</string>
     <string name="search_hint">   Address search e.g. Bangalore</string>
     <string name="search_for_your_location">Search for your location</string>
@@ -45,4 +44,11 @@
     <string name="_01_level_14_ub_city_ashok_nagar_bangalore">01,Level 14, UB City, Ashok Nagar,Bangalore</string>
     <string name="orders">Orders</string>
     <string name="active_orders">Active Orders</string>
+    <string name="help">Help</string>
+    <string name="order_details">Order Details</string>
+    <string name="payment_details">PAYMENT DETAILS</string>
+    <string name="item_total">Item total</string>
+    <string name="partner_delivery_fee">Partner delivery fee</string>
+    <string name="paid">Paid</string>
+    <string name="todo">TODO</string>
 </resources>
