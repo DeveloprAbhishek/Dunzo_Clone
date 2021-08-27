@@ -2,6 +2,11 @@
 <resources>
     <style name="roundedCorners">
         <item name="backgroundColor">@color/white</item>
-        <item name="cornerSize">15%</item>
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="CardRoundedCorners">
+        <item name="backgroundColor">@color/white</item>
+        <item name="cornerSize">5%</item>
     </style>
 </resources>
