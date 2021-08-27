@@ -27,16 +27,17 @@
             android:id="@+id/tvHelp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:background="@color/white"
             android:drawablePadding="@dimen/dp_12"
             android:gravity="center"
-            android:text="Help"
+            android:text="@string/help"
             android:textAlignment="gravity"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_18"
-            app:drawableStartCompat="@drawable/ic_chat_help" />
+            app:drawableStartCompat="@drawable/ic_chat_help"
+            tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -53,7 +54,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:padding="@dimen/dp_7"
-            android:src="@drawable/ic_baseline_radio_order24" />
+            android:src="@drawable/ic_baseline_radio_order24"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/tvOrderDetails"
@@ -63,9 +65,9 @@
             android:layout_toEndOf="@+id/indicator"
             android:drawablePadding="@dimen/dp_12"
             android:padding="@dimen/dp_7"
-            android:text="Order Details"
+            android:text="@string/order_details"
             android:textColor="@color/black"
-            android:textSize="@dimen/dp_22"
+            android:textSize="@dimen/sp_22"
             android:textStyle="bold" />
 
         <TextView
@@ -73,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvOrderDetails"
-            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_12"
             android:layout_toEndOf="@+id/indicator"
             android:text="Aug 23,"
             android:textColor="@color/grey"
@@ -84,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvOrderDetails"
-            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_12"
             android:layout_toEndOf="@+id/tvOrderDateDetail"
             android:text="9:25 AM"
             android:textColor="@color/grey"
@@ -95,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvOrderDetails"
-            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_12"
             android:layout_toEndOf="@+id/tvOrderTimeDetail"
             android:text="Ongoing"
             android:textColor="@color/grey"
@@ -157,7 +159,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:padding="@dimen/dp_7"
-            android:src="@drawable/ic_customer_indicator" />
+            android:src="@drawable/ic_customer_indicator"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/tvCustomerAddress"
@@ -198,8 +201,8 @@
             android:id="@+id/tvPaymentHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PAYMENT DETAILS"
-            android:textColor="@color/visible_grey"
+            android:text="@string/payment_details"
+            android:textColor="@color/black"
             android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
 
@@ -210,9 +213,8 @@
             android:layout_below="@id/tvPaymentHeader"
             android:layout_marginTop="@dimen/dp_12"
             android:padding="@dimen/dp_7"
-            android:text="Item total"
+            android:text="@string/item_total"
             android:textColor="@color/visible_grey"
-            android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
 
         <TextView
@@ -226,13 +228,12 @@
             android:padding="@dimen/dp_7"
             android:text="₹ 10"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
 
         <View
             android:id="@id/line1"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_below="@+id/tvItemTotal"
             android:layout_margin="@dimen/dp_12"
             android:background="@color/visible_grey"
@@ -245,9 +246,8 @@
             android:layout_below="@id/tvItemTotal"
             android:layout_marginTop="@dimen/dp_12"
             android:padding="@dimen/dp_7"
-            android:text="Partner delivery fee"
+            android:text="@string/partner_delivery_fee"
             android:textColor="@color/visible_grey"
-            android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
 
         <TextView
@@ -260,13 +260,12 @@
             android:padding="@dimen/dp_7"
             android:text="₹ 25"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
 
         <View
             android:id="@id/line1"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_below="@+id/tvPartnerDeliveryFee"
             android:layout_margin="@dimen/dp_12"
             android:background="@color/visible_grey"
@@ -279,9 +278,8 @@
             android:layout_below="@id/tvPartnerDeliveryFee"
             android:layout_marginTop="@dimen/dp_12"
             android:padding="@dimen/dp_7"
-            android:text="Paid"
-            android:textColor="@color/visible_grey"
-            android:textSize="@dimen/sp_18"
+            android:text="@string/paid"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
 
@@ -295,13 +293,12 @@
             android:padding="@dimen/dp_7"
             android:text="₹ 30"
             android:textColor="@color/light_green"
-            android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
 
         <View
             android:id="@id/line1"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_below="@+id/tvPaid"
             android:layout_margin="@dimen/dp_12"
             android:background="@color/visible_grey"
