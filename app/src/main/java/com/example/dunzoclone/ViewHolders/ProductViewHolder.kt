@@ -12,6 +12,10 @@ import kotlinx.android.synthetic.main.product_item_layout.view.ivProductImage
 class ProductViewHolder(view: View, var productItemClickListener: ProductItemClickListener): RecyclerView.ViewHolder(view) {
     fun setProductData(productList : ProductModel, position: Int){
         itemView.apply {
+            if(productList.isproductaddedtocart.toBoolean()){
+                cvProductAdd.visibility = View.VISIBLE
+                tvButtonAdd.visibility = View.GONE
+            }
             tvProductName.text = productList.name
             tvProductDesc.text = productList.quantity
             tvProductPrice.text = productList.price
@@ -23,11 +27,13 @@ class ProductViewHolder(view: View, var productItemClickListener: ProductItemCli
                 productItemClickListener.onAddButtonClick(productList, position)
             }
 
-            ivButtonAdd.setOnClickListener {
-                productItemClickListener.onAddButtonClick(productList, position)
+            ivButtonPlus.setOnClickListener {
+                productItemClickListener.onPlusButtonClick(productList, position)
             }
 
-            ivButtonRemove.setOnClickListener {
+            ivButtonMinus.setOnClickListener {
+//                cvProductAdd.visibility = View.GONE
+//                tvButtonAdd.visibility = View.VISIBLE
                 productItemClickListener.onMinusButtonClick(productList, position)
             }
         }

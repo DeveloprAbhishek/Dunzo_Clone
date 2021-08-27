@@ -12,13 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
-        <activity android:name=".Activities.SearchActivity" >
-
-        </activity>
+        <activity android:name=".Activities.SearchActivity"/>
         <activity android:name=".Activities.ProductActivity" />
         <activity android:name=".Activities.StoresActivity" />
         <activity android:name=".Activities.LocationActivity" />
         <activity android:name=".Activities.StoreCategoryActivity" />
+        <activity android:name=".Activities.CartActivity"/>
         <activity android:name=".Activities.EmptyCartActivity" />
         <activity android:name=".Activities.ProductDetailActivity" />
         <activity android:name=".Activities.OrderDetailsActivity" />

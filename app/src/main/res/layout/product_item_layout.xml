@@ -122,7 +122,7 @@
             android:padding="@dimen/dp_7">
 
             <ImageView
-                android:id="@+id/ivButtonAdd"
+                android:id="@+id/ivButtonMinus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -132,7 +132,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvCartItemQty"
+                android:id="@+id/tvProductQty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -141,7 +141,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/ivButtonRemove"
+                android:id="@+id/ivButtonPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
