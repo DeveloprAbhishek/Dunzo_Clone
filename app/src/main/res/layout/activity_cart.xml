@@ -41,45 +41,53 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerCart"
                 android:layout_width="match_parent"
+                tools:listitem="@layout/item_layout_cart_order"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp" />
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="13dp"
+                android:layout_height="10dp"
                 android:background="@color/grey" />
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="#fffdf1"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
+
                 <CheckBox
                     android:id="@+id/checkBoxOrder"
-                    android:buttonTint="@color/lightgreen"
                     android:layout_width="match_parent"
-                    android:text="No Contact Delivery"
-                    android:paddingLeft="15dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_height="wrap_content"/>
+                    android:buttonTint="@color/lightgreen"
+                    android:paddingLeft="15dp"
+                    android:text="No Contact Delivery" />
+
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingBottom="15dp"
-                    android:text="@string/No_ContactDelivery"/>
+                    android:text="@string/No_ContactDelivery" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="13dp"
+                android:layout_height="10dp"
                 android:background="@color/grey" />
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/partener_tip"/>
+                android:src="@drawable/partener_tip" />
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="13dp"
+                android:layout_height="10dp"
                 android:background="@color/grey" />
 
             <RelativeLayout
@@ -163,10 +171,77 @@
             <View
                 android:id="@+id/viewLine6"
                 android:layout_width="match_parent"
-                android:layout_height="13dp"
+                android:layout_height="10dp"
                 android:background="@color/grey" />
 
+            <LinearLayout
+                android:id="@+id/payLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12">
+
+                    <ImageView
+                        android:id="@+id/deliveryIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dp_7"
+                        android:src="@drawable/ic_down_delivery" />
+
+                    <LinearLayout
+                        android:id="@+id/deliveryDetailContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/deliveryIcon"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_12"
+                        android:paddingTop="@dimen/dp_22">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deliver To"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_20"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="jv Pune, Maharashtra"
+                            android:textColor="@color/visible_grey"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="42 minutes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_12"
+                    android:backgroundTint="#00e68a"
+                    android:padding="@dimen/dp_2"
+                    android:shadowColor="@color/white"
+                    android:text="Pay"
+                    app:cornerRadius="@dimen/dp_15" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
 
     </ScrollView>
 </RelativeLayout>
