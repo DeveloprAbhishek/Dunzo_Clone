@@ -117,7 +117,7 @@
             android:drawablePadding="@dimen/dp_7"
             android:gravity="center_vertical"
             android:padding="@dimen/dp_12"
-            android:text="1 Item"
+            android:text="0 Item"
             android:textColor="@color/black" />
 
         <TextView
@@ -127,7 +127,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/tvCartItemQty"
             android:padding="@dimen/dp_12"
-            android:text="₹ 25"
+            android:text="₹ 0"
             android:textColor="@color/light_green"
             android:textStyle="bold" />
 

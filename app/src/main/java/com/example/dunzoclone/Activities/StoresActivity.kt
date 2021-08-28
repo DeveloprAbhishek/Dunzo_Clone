@@ -5,97 +5,91 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dunzoclone.Adapters.StoreListAdapter
 import com.example.dunzoclone.ClickLitener.StoreItemClickListener
-import com.example.dunzoclone.DataModels.ProductCategory
-import com.example.dunzoclone.DataModels.StoreListModel
 import com.example.dunzoclone.R
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.GenericTypeIndicator
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_stores.*
-import com.google.firebase.firestore.DocumentReference
-import androidx.browser.customtabs.CustomTabsIntent.KEY_DESCRIPTION
+import com.example.dunzoclone.DataModels.Store
 
-import com.example.dunzoclone.MainActivity
-import com.google.android.gms.tasks.OnSuccessListener
-
-import com.google.firebase.firestore.FirebaseFirestoreException
-
-import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.ListenerRegistration
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class StoresActivity : AppCompatActivity(), StoreItemClickListener {
-    private lateinit var categoryTitle: String
-    private var storeList = ArrayList<StoreListModel>()
-    //private val db = Firebase.firestore
-    //private val noteRef = db.document("Notebook")
+    private val tag = "StoreActivity"
+
+    private var listOfStores = ArrayList<Store>()
+    private var storeSize = 0
+
+    private val db = Firebase.firestore
+    private val storeRef = db.collection("stores");
+    private lateinit var storeListener: ListenerRegistration
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stores)
         initViews()
-        //fireStoreData()
     }
 
-//    private fun fireStoreData(){
-//        db.collection("category").addSnapshotListener()
-//            .get()
-//            .addOnSuccessListener{result ->
-//                for (document in result) {
-//                    Log.d("Abhishek", "${document.id} => ${document.data}")
-//                }
-//            }
-//    }
     private fun initViews() {
-        categoryTitle = intent.getStringExtra("storeCategoryName").toString()
-        tvCategoryTitle.text = categoryTitle
-        getDataFromFirebase()
+        val categoryTitle = intent.getStringExtra("storeCategoryName").toString()
+        tvCategoryTitle.text = "Order $categoryTitle"
     }
 
-    private fun getDataFromFirebase() {
-        val database = Firebase.database
-        var categoryRef =database.getReference("category").child(categoryTitle).child("store")
 
-        categoryRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                Log.d("abhishek", snapshot.toString())
-                val genericTypeIndicator = object : GenericTypeIndicator<ArrayList<StoreListModel>>() {};
-                storeList = snapshot.getValue(genericTypeIndicator) as ArrayList<StoreListModel>
+    override fun onStart() {
+        super.onStart()
+        getAllStore()
+    }
+
+
+    private fun getAllStore() {
+        listOfStores.clear()
+        storeListener = storeRef.addSnapshotListener { snapshot, e ->
+            if (snapshot != null && !snapshot.isEmpty) {
+                tvStoreSize.text = snapshot.size().toString() + " Stores"
+                for (doc in snapshot) {
+                    Log.d(tag, doc.data["address"].toString())
+
+                    var storeListObject = doc.toObject(Store::class.java)
+
+                    listOfStores.add(storeListObject)
+                    Log.d(tag, "Current data: ${doc.data}")
+                }
                 setAdapter()
-            }
+                Log.d(tag, "storeList: ${listOfStores}")
+                Log.d(tag, "storeList: ${listOfStores[0].categories}")
 
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+            } else {
+                Log.d(tag, "Current data: null")
             }
+        }
+    }
 
-        })
+    override fun onStop() {
+        super.onStop()
+        storeListener.remove()
     }
 
     private fun setAdapter() {
         storeRecyclerView.layoutManager = LinearLayoutManager(this)
-        storeRecyclerView.adapter = StoreListAdapter(storeList, this)
+        storeRecyclerView.adapter = StoreListAdapter(listOfStores, this)
     }
 
-    private fun showToast(str:String) {
+    override fun onItemClickListener(storeListModel: Store, position: Int) {
+        val intent = Intent(this@StoresActivity, StoreCategoryActivity::class.java)
+        intent.putExtra("store_id", storeListModel.store_id)
+        intent.putExtra("storeName", storeListModel.store_name)
+        intent.putExtra("storeAddress", storeListModel.address)
+        startActivity(intent)
+    }
+
+    private fun showToast(str: String) {
         Toast.makeText(this@StoresActivity, str, Toast.LENGTH_SHORT).show()
     }
 
-
-    override fun onItemClickListener(storeListModel: StoreListModel, position: Int) {
-        val intent = Intent(this@StoresActivity, StoreCategoryActivity::class.java)
-        intent.putExtra("storePosition", position)
-        intent.putExtra("storeCategoryName", categoryTitle)
-
-        intent.putExtra("storeName", storeList[position].store_name)
-        intent.putExtra("storeAddress", storeList[position].address)
-        intent.putExtra("storeTime", storeList[position].time)
-        startActivity(intent)
-    }
 }

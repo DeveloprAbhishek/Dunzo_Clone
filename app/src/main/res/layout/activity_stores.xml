@@ -60,9 +60,10 @@
             app:drawableStartCompat="@drawable/ic_search_24" />
     </LinearLayout>
     <TextView
+        android:id="@+id/tvStoreSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="198 Stores"
+        android:text="0 Stores"
         android:padding="@dimen/dp_7"
         android:layout_margin="@dimen/dp_12"
         android:textColor="@color/black"

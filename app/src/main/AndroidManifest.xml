@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
-        <activity android:name=".Activities.SearchActivity"/>
         <activity android:name=".Activities.ProductActivity" />
         <activity android:name=".Activities.StoresActivity" />
         <activity android:name=".Activities.LocationActivity" />
@@ -23,7 +22,9 @@
         <activity android:name=".Activities.OrderDetailsActivity" />
         <activity android:name=".Activities.OrderActivity" />
         <activity android:name=".Activities.AdminActivity" />
-        <activity android:name=".Activities.HomeActivity"/>
+        <activity android:name=".Activities.HomeActivity">
+
+        </activity>
         <activity android:name=".Activities.VerifyMobileActivity" />
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.SplashScreen" >
@@ -34,6 +35,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_RDw06iKDxiNYZu" />
+
+        <meta-data
+            android:name="com.google.gms.wallet.api.enabled"
+            android:value="true" />
 
         <meta-data
             android:name="preloaded_fonts"
