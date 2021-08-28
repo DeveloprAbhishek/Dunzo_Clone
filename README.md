@@ -21,8 +21,7 @@ The Team Members are:
 
 
 **A little about the teammates and their contributions.**
-I can’t thank Avadhut and Nalinikanth enough, who worked hard for this project to become what it is today. I think the best way to thank them would be to mention their contribution and let their work speak for them.
-
+I can’t thank Avadhut and Akash enough, who worked hard for this project to become what it is today. I think the best way to thank them would be to mention their contribution and let their work speak for them.
 
 On the other hand, I handled the Home Screen, select city screen, I integrated the blog with our app, payment page. I also worked with all three of them to work on the UI part and connecting the screens. I used to merge all our codes at night and was tracking the progress of all of us.
 
