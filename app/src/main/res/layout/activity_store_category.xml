@@ -3,71 +3,81 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:layout_height="match_parent"
     tools:context=".Activities.StoreCategoryActivity">
 
-    <ImageView
-        android:id="@+id/ivBackbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back_arrow" />
-
-    <TextView
-        android:id="@+id/tvStoreName"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:lineSpacingExtra="5dp"
-        android:text="@string/tirupati_vegetables_and_fruit_market"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
-        app:layout_constraintStart_toEndOf="@+id/ivBackbtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvStoreLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/rasta_pet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
-
-    <EditText
-        android:id="@+id/etSearchitem"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/rectangle_border"
-        android:drawableStart="@drawable/ic_baseline_search"
-        android:hint="@string/enter_search_for_item"
-        android:inputType="textPersonName"
-        android:paddingHorizontal="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollMain"
+        android:paddingBottom="@dimen/dp_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/tirupati_vegetables_and_fruit_market"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.163"
+            app:layout_constraintStart_toEndOf="@+id/ivBackbtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStoreLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/rasta_pet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
+
+        <EditText
+            android:id="@+id/etSearchitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="@dimen/dp_22"
+            android:background="@drawable/rectangle_border"
+            android:drawableStart="@drawable/ic_baseline_search"
+            android:hint="@string/enter_search_for_item"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStoreLocation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <ScrollView
         android:id="@+id/scrollMain"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etSearchitem">
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topContainer">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/tvBestSeller"
@@ -127,14 +137,15 @@
                 android:id="@+id/recyclerviewStoreCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWhatLooking"
                 android:layout_marginLeft="@dimen/dp_18"
-                android:layout_marginRight="@dimen/dp_18"
-                android:layout_below="@+id/tvWhatLooking" />
+                android:layout_marginRight="@dimen/dp_18" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/recyclerviewStoreCategory"
+                android:layout_alignParentBottom="true"
                 android:layout_marginTop="@dimen/dp_7"
                 android:background="#f2f2f2"
                 android:orientation="vertical"
@@ -154,25 +165,21 @@
                     android:id="@+id/tvBottomStoreOwner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textStyle="italic"
                     android:layout_margin="5dp"
                     android:text="@string/tirupati_farsan_fruits_and"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tvBottomStoreAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textStyle="italic"
                     android:layout_margin="5dp"
                     android:text="@string/tirupati_address"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
 
             </LinearLayout>
-
         </RelativeLayout>
-
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
