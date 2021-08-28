@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.dunzoclone.Adapters.StoreListAdapter
 import com.example.dunzoclone.ClickLitener.StoreItemClickListener
 import com.example.dunzoclone.R
@@ -33,6 +35,18 @@ class StoresActivity : AppCompatActivity(), StoreItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stores)
         initViews()
+        //imageSlider
+        val imageList = ArrayList<SlideModel>()
+
+        imageList.add(SlideModel(R.drawable.s1))
+        imageList.add(SlideModel(R.drawable.s2))
+        imageList.add(SlideModel(R.drawable.s3))
+        imageList.add(SlideModel(R.drawable.s4))
+        imageList.add(SlideModel(R.drawable.s5))
+
+        imageSlider2.setImageList(imageList, ScaleTypes.FIT)
+        //
+
     }
 
     private fun initViews() {

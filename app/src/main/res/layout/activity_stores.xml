@@ -95,6 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp_12"
+                    android:id="@+id/tvStoreSize"
                     android:padding="@dimen/dp_7"
                     android:text="198 Stores"
                     android:textColor="@color/black"
