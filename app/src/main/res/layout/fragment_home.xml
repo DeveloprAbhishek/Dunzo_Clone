@@ -30,6 +30,7 @@
                 android:layout_centerVertical="true"
                 android:drawablePadding="15dp"
                 android:padding="5dp"
+                android:textColor="@color/white"
                 android:text="Rasta Peth"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -449,18 +450,29 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    app:tabGravity="center"
-                    android:background="@android:color/transparent"
-                    app:tabBackground="@drawable/tab_pager"
-                    app:tabIndicatorHeight="0dp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:layout_width="match_parent"
+                        android:id="@+id/imageSlider"
+                        android:layout_height="@dimen/dp_110"
+                        android:layout_margin="@dimen/dp_15"
+                        app:iss_auto_cycle="true"
+                        app:iss_corner_radius="7"
+                        app:iss_delay="0"
+                        app:iss_error_image="@color/dark_grey"
+                        app:iss_period="3000"
+                        app:iss_placeholder="@color/dark_grey"
+                        app:iss_selected_dot="@drawable/dot_background"
+                        app:iss_unselected_dot="@drawable/un_dot_background" />
+
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <View
@@ -470,31 +482,16 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_margin="@dimen/dp_15"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_assistent"
+                    app:shapeAppearanceOverlay="@style/roundedCorners" />
 
-                    <androidx.viewpager2.widget.ViewPager2
-                        android:id="@+id/viewPager"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal" />
-
-                    <LinearLayout
-                        android:id="@+id/dotSlider"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:orientation="horizontal">
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <View

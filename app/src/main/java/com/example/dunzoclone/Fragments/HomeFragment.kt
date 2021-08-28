@@ -2,14 +2,12 @@ package com.example.dunzoclone.Fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
-import android.widget.ViewFlipper
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.dunzoclone.Activities.AdminActivity
 import com.example.dunzoclone.Activities.EmptyCartActivity
 import com.example.dunzoclone.Activities.LocationActivity
@@ -20,14 +18,20 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
 
-        var viewPager = (R.id.viewPager) as ViewPager2
 
+        val imageList = ArrayList<SlideModel>()
 
-        //show_vf_images()
+        imageList.add(SlideModel(R.drawable.vf1))
+        imageList.add(SlideModel(R.drawable.vf2))
+        imageList.add(SlideModel(R.drawable.vf3))
+        imageList.add(SlideModel(R.drawable.vf4))
+
+        imageSlider.setImageList(imageList,ScaleTypes.FIT)
     }
 
 

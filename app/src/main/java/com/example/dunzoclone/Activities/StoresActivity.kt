@@ -22,6 +22,9 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_stores.*
 import com.google.firebase.firestore.DocumentReference
 import androidx.browser.customtabs.CustomTabsIntent.KEY_DESCRIPTION
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 
 import com.example.dunzoclone.MainActivity
 import com.google.android.gms.tasks.OnSuccessListener
@@ -42,6 +45,18 @@ class StoresActivity : AppCompatActivity(), StoreItemClickListener {
         setContentView(R.layout.activity_stores)
         initViews()
         //fireStoreData()
+
+        //imageSlider
+        val imageList = ArrayList<SlideModel>()
+
+        imageList.add(SlideModel(R.drawable.s1))
+        imageList.add(SlideModel(R.drawable.s2))
+        imageList.add(SlideModel(R.drawable.s3))
+        imageList.add(SlideModel(R.drawable.s4))
+        imageList.add(SlideModel(R.drawable.s5))
+
+        imageSlider2.setImageList(imageList,ScaleTypes.FIT)
+        //
     }
 
 //    private fun fireStoreData(){
