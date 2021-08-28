@@ -5,10 +5,10 @@
 
     <!--set color of the bullet-->
     <solid
-        android:color="@color/darkgreen"/>
+        android:color="@color/light_green"/>
 
     <!--set size of the bullet-->
     <size
-        android:width="10dp"
-        android:height="10dp"/>
+        android:width="8dp"
+        android:height="8dp"/>
 </shape>

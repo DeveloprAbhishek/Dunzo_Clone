@@ -110,7 +110,7 @@
                     android:text="Item total" />
 
                 <TextView
-                    android:id="@+id/tvitemTotal"
+                    android:id="@+id/tvItemTotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvPaymentDetail"
@@ -229,6 +229,7 @@
                 </RelativeLayout>
 
                 <Button
+                    android:id="@+id/btnPay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp_12"

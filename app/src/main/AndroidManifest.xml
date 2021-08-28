@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
-        <activity android:name=".Activities.SearchActivity"/>
         <activity android:name=".Activities.ProductActivity" />
         <activity android:name=".Activities.StoresActivity" />
         <activity android:name=".Activities.LocationActivity" />
@@ -34,6 +33,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_RDw06iKDxiNYZu" />
+
+        <meta-data
+            android:name="com.google.gms.wallet.api.enabled"
+            android:value="true" />
 
         <meta-data
             android:name="preloaded_fonts"

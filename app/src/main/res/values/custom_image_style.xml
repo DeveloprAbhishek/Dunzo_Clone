@@ -5,6 +5,11 @@
         <item name="cornerSize">10%</item>
     </style>
 
+    <style name="FlipperRoundedCorners">
+        <item name="backgroundColor">@color/white</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
     <style name="CardRoundedCorners">
         <item name="backgroundColor">@color/white</item>
         <item name="cornerSize">5%</item>

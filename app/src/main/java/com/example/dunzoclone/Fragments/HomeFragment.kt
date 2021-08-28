@@ -2,12 +2,12 @@ package com.example.dunzoclone.Fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.dunzoclone.Activities.AdminActivity
 import com.example.dunzoclone.Activities.EmptyCartActivity
 import com.example.dunzoclone.Activities.LocationActivity
@@ -18,35 +18,29 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
+
+
+        val imageList = ArrayList<SlideModel>()
+
+        imageList.add(SlideModel(R.drawable.vf1))
+        imageList.add(SlideModel(R.drawable.vf2))
+        imageList.add(SlideModel(R.drawable.vf3))
+        imageList.add(SlideModel(R.drawable.vf4))
+
+        imageSlider.setImageList(imageList,ScaleTypes.FIT)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-//        var vfImages =
-//            intArrayOf(R.drawable.vf1, R.drawable.vf2, R.drawable.vf3, R.drawable.vf4)
-//
-//        for (vf_image :Int in vfImages)
-//        {
-//            show_vf_images(vf_image)
-//        }
-        return super.onCreateView(inflater, container, savedInstanceState)
-
-
-
-    }
 
     private fun initViews() {
         //Toolbar Views
         ivToolbarProfile.setOnClickListener(this)
         ivToolbarCart.setOnClickListener(this)
         tvToolbarLocation.setOnClickListener(this)
+
 
         //Categories Views
         ivFruits.setOnClickListener(this)
@@ -62,21 +56,21 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
         when (v?.id) {
             R.id.ivFruits -> {
                 val intent = Intent(context, StoresActivity::class.java)
-                intent.putExtra("storeCategoryName", "fruits")
+                intent.putExtra("storeCategoryName", "Fruits & Vegetables")
                 startActivity(intent)
             }
             R.id.ivGroceries -> {
                 val intent = Intent(context, StoresActivity::class.java)
-                intent.putExtra("storeCategoryName", "groceries")
+                intent.putExtra("storeCategoryName", "Daily Grocery")
                 startActivity(intent)
             }
             R.id.ivMeat -> {
                 val intent = Intent(context, StoresActivity::class.java)
-                intent.putExtra("storeCategoryName", "meat")
+                intent.putExtra("storeCategoryName", "Meat and Fish")
                 startActivity(intent)
             }
             R.id.ivPickup -> {
-                Toast.makeText(context, "medicines", Toast.LENGTH_SHORT)
+                Toast.makeText(context, "PickUp", Toast.LENGTH_SHORT)
                     .show()
             }
             R.id.ivToolbarProfile -> {
@@ -92,14 +86,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
     }
 
 
-//     fun show_vf_images(vf_image: Int) {
+//     fun show_vf_images() {
 //
-//        val imageView = ImageView(context)
-//        imageView.setBackgroundResource(vf_image)
-//        viewFlipper.addView(imageView)
-//         viewFlipper.flipInterval = 3000
-//         viewFlipper.isAutoStart = true
-//        viewFlipper.setInAnimation(context, android.R.anim.slide_in_left)
-//        viewFlipper.setOutAnimation(context, android.R.anim.slide_out_right)
+//         view_Flipper.flipInterval = 3000
+//         view_Flipper.isAutoStart = true
+//         view_Flipper.startFlipping()
+//         view_Flipper.setInAnimation(context,R.anim.flip_in)
+//         view_Flipper.setOutAnimation(context,R.anim.flip_out)
 //    }
 }

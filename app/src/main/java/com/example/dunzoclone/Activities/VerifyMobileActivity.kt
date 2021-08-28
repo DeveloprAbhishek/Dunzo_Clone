@@ -11,6 +11,7 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_verify_mobile.*
 import java.util.concurrent.TimeUnit
@@ -96,10 +97,9 @@ class VerifyMobileActivity : AppCompatActivity() {
     }
 
     private fun addUserDetailsToDatabase(uid: String) {
-        val database = Firebase.database
+        val db = Firebase.firestore
         val user = User(tvEnterOTP.text.toString(), uid)
-        database.getReference("users").child(uid).setValue(user)
-
+        db.collection("users").document(uid).set(user)
     }
 
     private fun sendVerificationCode() {

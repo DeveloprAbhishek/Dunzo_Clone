@@ -4,13 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dunzoclone.ClickLitener.StoreCatItemClickListener
+import com.example.dunzoclone.DataModels.Categories
 import com.example.dunzoclone.DataModels.ProductCategory
 import com.example.dunzoclone.R
 import com.example.dunzoclone.ViewHolders.StoreCategoryViewHolder
 import java.util.ArrayList
 
 class StoreCategoryAdapter(
-    private val categoryList: ArrayList<ProductCategory>,
+    private val categoryList: ArrayList<Categories>,
     private var storeCatItemClickListener: StoreCatItemClickListener
 ) : RecyclerView.Adapter<StoreCategoryViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreCategoryViewHolder {
@@ -20,7 +21,7 @@ class StoreCategoryAdapter(
     }
 
     override fun onBindViewHolder(holder: StoreCategoryViewHolder, position: Int) {
-        val category: ProductCategory = categoryList[position]
+        val category: Categories = categoryList[position]
         holder.setStoreCategoryData(category, position)
     }
 
