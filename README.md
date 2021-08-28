@@ -6,6 +6,8 @@
  
  ![GitHub Cards Preview](https://resources.dunzo.com/web-assets/prod/_next/static/images/dunzo-daily-mobile-touchpoint-240105886254c2b822ddf7cb58a92399.jpg)
 
+ ![GitHub Cards Preview](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8xEQbNPkDB_d3DWhyswZrCEWLarVXaMqCIA&usqp=CAU) 
+
 ## The Journey of making Dunzo Android App
 
 Hello there, I am Amol an Aspiring Android Developer learning at Masai School. You might have used the Dunzo Android App,
