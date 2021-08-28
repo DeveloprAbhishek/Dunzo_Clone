@@ -49,7 +49,7 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 ## Built With 🚀
 - [Java](https://www.java.com/en/) - Java has platform independent feature so it is used for android development.
 - [Android](https://www.android.com/intl/en_in/)
-- [Kotlin]("https://kotlinlang.org/")
+- [Kotlin](https://kotlinlang.org/)
 
 ## Instructions to clone this project ✌
 1. Open Android Studio.
