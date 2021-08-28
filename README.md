@@ -4,7 +4,7 @@
  ##
  ##
  
- ![GitHub Cards Preview](https://play-lh.googleusercontent.com/t4RL9k-H38WY_Q49kyV8dB_3Wqr2wYyOi8uQdawHJBexcC-SGOuFaYDAKr6ZDLan9mU)
+ ![GitHub Cards Preview](https://resources.dunzo.com/web-assets/prod/_next/static/images/dunzo-daily-mobile-touchpoint-240105886254c2b822ddf7cb58a92399.jpg)
 
 ## The Journey of making Dunzo Android App
 
