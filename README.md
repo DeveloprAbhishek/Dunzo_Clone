@@ -15,8 +15,8 @@ Dunzo can change the way you move things, how you shop and lets you access your 
 Moving ahead, we team Ninja developed a clone of the App of Nearbuy in just 5 days as a part of our curriculum. This blog is all about our journey and the challenges we faced while building the project.
 
 The Team Members are:
-1. Avadhut Chougule
-2. Nalinikanta Ojha
+1. Abhishek Khichi
+2. Akash Prajapat
 3. Amol Pardeshi
 
 
@@ -38,7 +38,8 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 ## Tech Stack ✨
 - Android Studio
 - Android(Recycler View, ScrollView, Webview, Preferences, Permissions)
-- QR code scan library,
+- QR code scan library
+- Firbase
 
 ## Used Open Source-Libraries 😎
 - [Glide](https://github.com/bumptech/glide)
@@ -48,6 +49,7 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 ## Built With 🚀
 - [Java](https://www.java.com/en/) - Java has platform independent feature so it is used for android development.
 - [Android](https://www.android.com/intl/en_in/)
+- [Kotlin]("https://kotlinlang.org/")
 
 ## Instructions to clone this project ✌
 1. Open Android Studio.
