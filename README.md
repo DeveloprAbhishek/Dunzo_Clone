@@ -12,7 +12,7 @@
 Hello there, I am Amol an Aspiring Android Developer learning at Masai School. You might have used the Dunzo Android App,
 Dunzo can change the way you move things, how you shop and lets you access your city like never before. We're an app that connects you to the nearest delivery partner who can make purchases, pick up items from any store or restaurant in the city and bring them to you.
 
-Moving ahead, we team Ninja developed a clone of the App of Nearbuy in just 5 days as a part of our curriculum. This blog is all about our journey and the challenges we faced while building the project.
+Moving ahead, we team Dunzo developed a clone of the App of Dunzo App in just 5 days as a part of our curriculum. This blog is all about our journey and the challenges we faced while building the project.
 
 The Team Members are:
 1. Abhishek
@@ -21,9 +21,7 @@ The Team Members are:
 
 
 **A little about the teammates and their contributions.**
-I can’t thank Avadhut and Akash enough, who worked hard for this project to become what it is today. I think the best way to thank them would be to mention their contribution and let their work speak for them.
-
-On the other hand, I handled the Home Screen, select city screen, I integrated the blog with our app, payment page. I also worked with all three of them to work on the UI part and connecting the screens. I used to merge all our codes at night and was tracking the progress of all of us.
+I can’t thank Abhishek and Akash enough, who worked hard for this project to become what it is today. I think the best way to thank them would be to mention their contribution and let their work speak for them.
 
 Though this project was not a piece of cake. I loved to work with these amazing guys during this 5 days journey we got lots of learnings and got a broader perspective about the application lifecycle.
 
@@ -33,12 +31,13 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 - Android Studio
 - Android(Recycler View, ScrollView, Webview, Preferences, Permissions)
 - QR code scan library
-- Firbase
+- Firbase - Firestore
 
 ## Used Open Source-Libraries 😎
 - [Glide](https://github.com/bumptech/glide)
 - [Circular Image View](https://github.com/hdodenhof/CircleImageView)
 - [Code-Scanner](https://github.com/yuriy-budiyev/code-scanner.git)
+- [Razorpay Payment for Gateway](https://razorpay.com/docs/payment-gateway/android-integration/standard)
 
 ## Built With 🚀
 
@@ -64,21 +63,20 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 ## 3. Home Screen
 ![GitHub Cards Preview](https://miro.medium.com/max/875/1*BdkgTec-C1TLmePiw06e0w.png)
 ##
-## 4. Menu Screen 
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*WcXVUG4OHI7F7ymX_Exxvw.jpeg)
+## 4. Search Page 
+![GitHub Cards Preview](https://miro.medium.com/max/875/1*pSllrNqrwcJjo63tOWqm8A.png)
 ##
 ##
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*eANdla9_Uuok2hHeAX15yQ.jpeg)
+## 5. Product Cart
+![GitHub Cards Preview](https://miro.medium.com/max/875/1*vsRzl8vwvpDbTrLpZcktyg.png)
 ##
-## 5. Stories Page
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*8xSL2yI2LWmXAObwx7DddQ.jpeg)
+## 6. Payment Process
+![GitHub Cards Preview](https://miro.medium.com/max/875/1*U2U8GAxSwOesI2vDaPDrew.png)
 ##
-## 6. Merchants Profile
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*SRW-AzcqCIefdXrbAh1Asg.jpeg)
+## 7. Order Page
+![GitHub Cards Preview](https://miro.medium.com/max/875/1*e85tQ--1VyUn7Vi3u79z3w.png)
 ##
-## 7. Payment Process
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*UQOjuWYOocmB9VPOGpFxoA.jpeg)
-##
+
 ##
 
 ## Ending Notes:
