@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.dunzoclone.Adapters.BestSellerAdapter
 import com.example.dunzoclone.Adapters.StoreCategoryAdapter
 import com.example.dunzoclone.ClickLitener.StoreCatItemClickListener
 import com.example.dunzoclone.DataModels.Categories
 import com.example.dunzoclone.DataModels.ProductCategory
+import com.example.dunzoclone.DataModels.Products
 import com.example.dunzoclone.DataModels.Store
 import com.example.dunzoclone.R
 import com.google.firebase.database.DataSnapshot
@@ -31,8 +33,11 @@ class StoreCategoryActivity : AppCompatActivity(), StoreCatItemClickListener{
     private lateinit var store_id: String
 
     //firestore
-    private var listOfStoreCat = ArrayList<Categories>()
     private val db = Firebase.firestore
+    private var bestSellerList = ArrayList<Products>()
+    private val bestSellerListRef = db.collection("products");
+
+    private var listOfStoreCat = ArrayList<Categories>()
     private val storeCategoryRef = db.collection("stores");
     private lateinit var storeCategoryListener: ListenerRegistration
 
@@ -54,6 +59,7 @@ class StoreCategoryActivity : AppCompatActivity(), StoreCatItemClickListener{
 
     override fun onStart() {
         super.onStart()
+        getSellerData()
         getCategoryData()
     }
 
@@ -71,11 +77,33 @@ class StoreCategoryActivity : AppCompatActivity(), StoreCatItemClickListener{
         }
     }
 
+
+    private fun getSellerData() {
+        bestSellerList.clear()
+        bestSellerListRef.addSnapshotListener { snapshot, e ->
+            if (snapshot != null && !snapshot.isEmpty) {
+                for (doc in snapshot) {
+                    Log.d("abhishek", doc.data.toString())
+                    var storeListObject = doc.toObject(Products::class.java)
+                    bestSellerList.add(storeListObject)
+                }
+                setBestSellerAdapter()
+            } else {
+                Log.d(tag, "Current data: null")
+            }
+        }
+    }
+
     override fun onStop() {
         super.onStop()
         storeCategoryListener.remove()
     }
 
+
+    private fun setBestSellerAdapter() {
+        recyclerBestSeller.layoutManager = GridLayoutManager(this, 2, LinearLayoutManager.HORIZONTAL, false)
+        recyclerBestSeller.adapter = BestSellerAdapter(bestSellerList)
+    }
 
     private fun setAdapter() {
         recyclerviewStoreCategory.layoutManager = GridLayoutManager(this, 3)

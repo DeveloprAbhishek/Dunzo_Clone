@@ -52,10 +52,10 @@
     </RelativeLayout>
 
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollMain"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@id/topContainer">
 
@@ -173,5 +173,5 @@
             </LinearLayout>
 
         </RelativeLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

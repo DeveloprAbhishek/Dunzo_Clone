@@ -22,8 +22,8 @@ class ProductViewHolder(
             }
 
             tvProductName.text = productList.name
-            tvProductDesc.text = productList.quantity + "KG"
-            tvProductPrice.text = productList.price
+            tvProductDesc.text = productList.quantity + " KG"
+            tvProductPrice.text = "₹"+productList.price
             Glide.with(ivProductImage).load(productList.image).into(ivProductImage)
 
             tvButtonAdd.setOnClickListener {

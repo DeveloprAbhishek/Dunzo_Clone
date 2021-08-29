@@ -105,7 +105,7 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
                     cartTotalPrice = document.data?.get("cartTotal").toString().toInt()
                     cartTotalItem = document.data?.get("totalItem").toString().toInt()
                     tvItemTotal.text = cartTotalItem.toString()
-                    tvToPay.text = cartTotalPrice.toString()
+                    tvToPay.text = "₹" +cartTotalPrice.toString()
                 } else {
                     Log.d(tag, "No such document")
                 }

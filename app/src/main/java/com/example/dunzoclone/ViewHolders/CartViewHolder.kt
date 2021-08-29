@@ -11,7 +11,7 @@ class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun setCartData(cartList: Products, position :Int){
         itemView.apply {
-            tvCartItemPrise.text = cartList.price
+            tvCartItemPrise.text = "₹"+cartList.price
             tvCartItemWeight.text = cartList.quantity
             tvCartitemName.text = cartList.name
         }

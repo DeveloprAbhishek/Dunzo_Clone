@@ -3,7 +3,9 @@ package com.example.dunzoclone.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
@@ -48,19 +50,27 @@ public class PaymentActivity extends AppCompatActivity  implements PaymentResult
             options.put("retry", retryObj);
 
             checkout.open(activity, options);
-
+            Log.d("abhishek", "startPayment");
         } catch(Exception e) {
-            Log.e("TAG Payment", "Error in starting Razorpay Checkout", e);
+            Log.e("abhishek", "Error in starting Razorpay Checkout", e);
         }
     }
 
     @Override
     public void onPaymentSuccess(String s) {
+        Log.d("abhishek", s);
+        redirect();
+
+
+    }
+
+    private void redirect() {
+        startActivity(new Intent(PaymentActivity.this, PaymentSuccess.class));
 
     }
 
     @Override
     public void onPaymentError(int i, String s) {
-
+        Log.d("abhishek", s);
     }
 }

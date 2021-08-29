@@ -12,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
-        <activity
-            android:name=".Activities.PaymentActivity"
-            android:exported="true" />
+
+        <activity android:name=".Activities.PaymentSuccess"/>
+        <activity android:name=".Activities.PaymentActivity" />
         <activity android:name=".Activities.ProductActivity" />
         <activity android:name=".Activities.StoresActivity" />
         <activity android:name=".Activities.LocationActivity" />

@@ -6,13 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.dunzoclone.DataModels.Products
 import com.example.dunzoclone.DataModels.SearchModel
 import com.example.dunzoclone.R
 import kotlinx.android.synthetic.main.search_item_layout.view.*
 
-class SearchAdapter(var dataList: ArrayList<SearchModel>, val context: Context) :
+class SearchAdapter(var dataList: ArrayList<Products>, val context: Context) :
     RecyclerView.Adapter<SearchAdapter.viewHolder>() {
-    var backupList = ArrayList<SearchModel>()
+    var backupList = ArrayList<Products>()
 
     init {
         backupList = dataList
@@ -25,7 +27,7 @@ class SearchAdapter(var dataList: ArrayList<SearchModel>, val context: Context) 
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        val item: SearchModel = dataList[position]
+        val item: Products = dataList[position]
         holder.setData(item)
     }
 
@@ -37,15 +39,15 @@ class SearchAdapter(var dataList: ArrayList<SearchModel>, val context: Context) 
     fun getFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(constraint: CharSequence?): FilterResults {
-                var filteredList = ArrayList<SearchModel>()
+                var filteredList = ArrayList<Products>()
                 val keyword = constraint.toString()
                 if (keyword.isEmpty()) {
                     filteredList = backupList
                 } else {
 
                     for (obj in backupList) {
-                        if (obj.product_name.lowercase().contains(keyword.lowercase()) ||
-                            obj.product_desc.lowercase().contains(keyword.lowercase())
+                        if (obj.name.lowercase().contains(keyword.lowercase()) ||
+                            obj.quantity.lowercase().contains(keyword.lowercase())
                         ) {
                             filteredList.add(obj)
                         }
@@ -57,7 +59,7 @@ class SearchAdapter(var dataList: ArrayList<SearchModel>, val context: Context) 
             }
 
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                dataList = results?.values as ArrayList<SearchModel>
+                dataList = results?.values as ArrayList<Products>
                 notifyDataSetChanged()
             }
 
@@ -67,11 +69,11 @@ class SearchAdapter(var dataList: ArrayList<SearchModel>, val context: Context) 
 
     class viewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun setData(model: SearchModel) {
-            itemView.tvProductNameBySearch.text = model.product_name
-            itemView.tvProductDescBySearch.text = model.product_desc
+        fun setData(model: Products) {
+            itemView.tvProductNameBySearch.text = model.name
             itemView.tvQuantitySelectorBySearch.text = model.quantity
             itemView.tvProductPriceBySearch.text = model.price
+            Glide.with(itemView.ivProductImageBySearch).load(model.image).into(itemView.ivProductImageBySearch)
         }
     }
 }
