@@ -15,7 +15,7 @@ Dunzo can change the way you move things, how you shop and lets you access your 
 Moving ahead, we team Ninja developed a clone of the App of Nearbuy in just 5 days as a part of our curriculum. This blog is all about our journey and the challenges we faced while building the project.
 
 The Team Members are:
-1. Abhishek Khichi
+1. Abhishek
 2. Akash Prajapat
 3. Amol Pardeshi
 
