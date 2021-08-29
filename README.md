@@ -58,11 +58,11 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 ## 1. Video Flash Screen 
 ![GitHub Cards Preview](https://miro.medium.com/max/1400/1*8o8v4ba2-sgUpqq1jQJSYw.png)
 ##
-## 2. Map Permission:
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*JuDxVDEts7RyEA4Ur9iSKA.jpeg)
+## 2. Login Page:
+![GitHub Cards Preview](https://miro.medium.com/max/875/1*LJ4oNdt8Gdkm5qAhJyQg0g.png)
 ##
 ## 3. Home Screen
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*Lb5wzvPYR6ifxxitGypucg.jpeg)
+![GitHub Cards Preview](https://miro.medium.com/max/875/1*BdkgTec-C1TLmePiw06e0w.png)
 ##
 ## 4. Menu Screen 
 ![GitHub Cards Preview](https://miro.medium.com/max/875/1*WcXVUG4OHI7F7ymX_Exxvw.jpeg)
