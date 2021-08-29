@@ -57,8 +57,8 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 
 ## Here are the some screenshots of the cloned application
 ##
-## 1. Flash Screen and Introductory Screen
-![GitHub Cards Preview](https://miro.medium.com/max/875/1*h1Cqu91a0Xwrmj2dmklX9A.jpeg)
+## 1. Video Flash Screen 
+![GitHub Cards Preview](https://drive.google.com/file/d/17sSbhDga5mTDX505w9ssl_cSBNWQn8HW/view?usp=sharing)
 ##
 ## 2. Map Permission:
 ![GitHub Cards Preview](https://miro.medium.com/max/875/1*JuDxVDEts7RyEA4Ur9iSKA.jpeg)
