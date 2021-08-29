@@ -30,7 +30,7 @@ Though this project was not a piece of cake. I loved to work with these amazing 
 ## Tech Stack ✨
 - Android Studio
 - Android(Recycler View, ScrollView, Webview, Preferences, Permissions)
-- QR code scan library
+- Razorpay Payment Gateway
 - Firbase - Firestore
 
 ## Used Open Source-Libraries 😎
