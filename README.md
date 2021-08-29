@@ -16,7 +16,7 @@ Moving ahead, we team Dunzo developed a clone of the App of Dunzo App in just 5 
 
 The Team Members are:
 1. Abhishek
-2. Akash Prajapat
+2. Akash Kumar Prajapat
 3. Amol Pardeshi
 
 
