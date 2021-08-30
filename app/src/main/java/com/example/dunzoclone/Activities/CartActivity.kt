@@ -21,6 +21,7 @@ import com.google.firebase.database.GenericTypeIndicator
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.razorpay.Checkout
@@ -30,7 +31,6 @@ import com.razorpay.PaymentResultWithDataListener
 import kotlinx.android.synthetic.main.activity_cart.*
 import kotlinx.android.synthetic.main.activity_product.*
 import org.json.JSONObject
-import java.lang.Exception
 import java.util.ArrayList
 
 class CartActivity : AppCompatActivity(), PaymentResultListener {
@@ -43,7 +43,7 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
     //firestore
     private val db = Firebase.firestore
     private val cartRef = db.collection("users");
-
+    private lateinit var store_id: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +51,7 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
         Checkout.preload(applicationContext)
 
         auth = Firebase.auth
+        getIntentData()
         getCartTotal()
 
         ivBack.setOnClickListener {
@@ -58,9 +59,38 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
         }
 
         btnPay.setOnClickListener {
-            startPayment()
+            updateOrder()
+            startActivity(Intent(this, PaymentActivity::class.java))
         }
-        //showCartValue()
+    }
+
+    private fun getIntentData() {
+        store_id = intent.getStringExtra("storeId").toString()
+    }
+
+    private fun updateOrder() {
+        val updateOrderTotalPrice = hashMapOf("orderPrice" to cartTotalPrice)
+        val updateOrderTotalItem = hashMapOf("orderItem" to cartTotalItem)
+
+        val updateCartTotalPrice = hashMapOf("cartTotal" to 0)
+        val updateCartTotalItem = hashMapOf("totalItem" to 0)
+
+        auth.currentUser?.uid?.let {
+            cartRef.document(it).set(updateOrderTotalPrice, SetOptions.merge())
+            cartRef.document(it).set(updateOrderTotalItem, SetOptions.merge())
+
+            cartRef.document(it).set(updateCartTotalPrice, SetOptions.merge())
+            cartRef.document(it).set(updateCartTotalItem, SetOptions.merge())
+        }
+
+        auth.currentUser?.uid?.let {
+            cartRef.document(it).collection("cartItem").get().addOnSuccessListener { document ->
+                for (doc in document) {
+                    cartRef.document(it).collection("orderItem").add(doc.data)
+                    doc.reference.delete()
+                }
+            }
+        }
     }
 
     override fun onStart() {
@@ -75,7 +105,7 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
                     cartTotalPrice = document.data?.get("cartTotal").toString().toInt()
                     cartTotalItem = document.data?.get("totalItem").toString().toInt()
                     tvItemTotal.text = cartTotalItem.toString()
-                    tvToPay.text = cartTotalPrice.toString()
+                    tvToPay.text = "₹" +cartTotalPrice.toString()
                 } else {
                     Log.d(tag, "No such document")
                 }
@@ -106,29 +136,6 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
         super.onStop()
     }
 
-    private fun showCartValue() {
-//        val userId = auth.currentUser?.uid
-//        val database = Firebase.database
-//        val cartRef = userId?.let {
-//            database.getReference("users").child(it).child("cartItem").addValueEventListener(object :
-//                ValueEventListener {
-//                override fun onDataChange(snapshot: DataSnapshot) {
-//                    Log.d("abhishek", snapshot.value.toString())
-//                        val genericTypeIndicator =
-//                            object : GenericTypeIndicator<List<ProductModel?>?>() {};
-//                        cartList = snapshot.getValue(genericTypeIndicator) as ArrayList<ProductModel>
-//                        setAdapter()
-//
-//                }
-//
-//                override fun onCancelled(error: DatabaseError) {
-//                    onShowToastMessage("Error While clicking minus button!")
-//                }
-//
-//            })
-//        }
-    }
-
     private fun setAdapter() {
         recyclerCart.layoutManager = LinearLayoutManager(this)
         recyclerCart.adapter = CartAdapter(cartList)
@@ -140,40 +147,47 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
 
 
     //Payment using RazorPay
-     private fun startPayment() {
-
+    private fun startPayment() {
+        /*
+        *  You need to pass current activity in order to let Razorpay create CheckoutActivity
+        * */
         val activity:Activity = this
         val co = Checkout()
 
         try {
             val options = JSONObject()
-            options.put("name","App name")
-            options.put("description","Demo payment")
-//You can omit the image option to fetch the image from dashboard
+            options.put("name","Razorpay Corp")
+            options.put("description","Demoing Charges")
+            //You can omit the image option to fetch the image from dashboard
             options.put("image","https://s3.amazonaws.com/rzp-mobile/images/rzp.png")
-            options.put("currency","INR")
-            options.put("amount",cartTotalPrice*100)
+            options.put("theme.color", "#3399cc");
+            options.put("currency","INR");
+            options.put("order_id", "order_DBJOWzybf0sJbb");
+            options.put("amount","50000")//pass amount in currency subunits
+
+            val retryObj = JSONObject();
+            retryObj.put("enabled", true);
+            retryObj.put("max_count", 4);
+            options.put("retry", retryObj);
 
             val prefill = JSONObject()
-            prefill.put("email","test@razorpay.com")
+            prefill.put("email","gaurav.kumar@example.com")
             prefill.put("contact","9876543210")
 
             options.put("prefill",prefill)
             co.open(activity,options)
-        }catch (e: java.lang.Exception){
+        }catch (e: Exception){
             Toast.makeText(activity,"Error in payment: "+ e.message,Toast.LENGTH_LONG).show()
             e.printStackTrace()
         }
     }
 
 
-    override fun onPaymentError(errorCode: Int, response: String?) {
-
-            Log.e("TAG","Payment Success")
-
+    override fun onPaymentSuccess(p0: String?) {
+        TODO("Not yet implemented")
     }
 
-    override fun onPaymentSuccess(razorpayPaymentId: String?) {
-        Log.e("TAG","Payment Failure")
+    override fun onPaymentError(p0: Int, p1: String?) {
+        Log.d(tag, p1.toString())
     }
 }

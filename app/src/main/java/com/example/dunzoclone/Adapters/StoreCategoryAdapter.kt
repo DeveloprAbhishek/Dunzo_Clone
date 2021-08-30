@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dunzoclone.ClickLitener.StoreCatItemClickListener
 import com.example.dunzoclone.DataModels.Categories
 import com.example.dunzoclone.DataModels.ProductCategory
+import com.example.dunzoclone.DataModels.Products
 import com.example.dunzoclone.R
 import com.example.dunzoclone.ViewHolders.StoreCategoryViewHolder
 import java.util.ArrayList

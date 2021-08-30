@@ -23,9 +23,6 @@ import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.activity_store_category.*
 import java.util.ArrayList
 
-
-
-
 class ProductActivity : AppCompatActivity(), ProductItemClickListener {
     //₹
     private val tag = "ProductActivity"
@@ -48,13 +45,25 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
     private val productsRef = db.collection("products");
     private val cartRef = db.collection("users");
     private lateinit var productListener: ListenerRegistration
+    private var cartProductId = HashMap<String, String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
         auth = Firebase.auth
         initViews()
-        //isCartEmpty()
+        getCartProductId()
+    }
+
+    private fun getCartProductId() {
+        auth.currentUser?.uid?.let {
+            cartRef.document(it).collection("cartItem").get().addOnSuccessListener { document ->
+                for (doc in document) {
+                    cartProductId.put(doc.data["product_id"].toString(), doc.data["product_id"].toString())
+                }
+            }
+
+        }
     }
 
     override fun onStart() {
@@ -71,8 +80,8 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
                     cartTotalItem = document.data?.get("totalItem").toString().toInt()
                     if(cartTotalItem > 0) {
                         bottomBar.visibility = View.VISIBLE
-                        tvCartItemQty.text  = cartTotalItem.toString()
-                        tvCartPrice.text = cartTotalPrice.toString()
+                        tvCartItemQty.text  = "${cartTotalItem.toString()} Item"
+                        tvCartPrice.text = "₹${cartTotalPrice.toString()}"
                     }
                 } else {
                     Log.d(tag, "No such document")
@@ -104,10 +113,6 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
         productListener.remove()
     }
 
-
-    private fun setBottomBarValues() {
-    }
-
     private fun initViews() {
         storeId = intent.getStringExtra("storeId").toString()
         storeName = intent.getStringExtra("storeName").toString()
@@ -118,6 +123,7 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
 
         btnCardBtn.setOnClickListener{
             var intent = Intent(this@ProductActivity, CartActivity::class.java)
+            intent.putExtra("storeId", storeId)
             intent.putExtra("storeName", storeName)
             startActivity(intent)
         }
@@ -130,7 +136,7 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
 
     private fun setAdapter() {
         productRecyclerView.layoutManager = LinearLayoutManager(this)
-        productRecyclerView.adapter = ProductAdapter(listOfProducts, this)
+        productRecyclerView.adapter = ProductAdapter(listOfProducts, this, cartProductId)
     }
 
     override fun onItemClickListener(productModel: Products, storePosition: Int) {
@@ -154,11 +160,25 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
     }
 
     override fun onMinusButtonClick(productModel: Products, storePosition: Int) {
+        cartTotalPrice -= productModel.price.toString().toInt()
+        cartTotalItem -= productModel.quantity.toString().toInt()
+
+        tvCartItemQty.text  = "${cartTotalItem.toString()} Item"
+        tvCartPrice.text = "₹${cartTotalPrice.toString()}"
+
+        val updateCartTotalPrice = hashMapOf("cartTotal" to cartTotalPrice)
+        val updateCartTotalItem = hashMapOf("totalItem" to cartTotalItem)
+
+        auth.currentUser?.uid?.let {
+            cartRef.document(it).collection("cartItem").document(productModel.product_id).delete()
+            cartRef.document(it).set(updateCartTotalPrice, SetOptions.merge())
+            cartRef.document(it).set(updateCartTotalItem, SetOptions.merge())
+        }
     }
 
     private fun addDataToCart(productModel: Products, position: Int) {
         auth.currentUser?.uid?.let {
-            cartRef.document(it).collection("cartItem").add(productModel)
+            cartRef.document(it).collection("cartItem").document(productModel.product_id).set(productModel)
         }
     }
 
@@ -166,8 +186,8 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
         cartTotalPrice += (productModel.price).toString().toInt()
         cartTotalItem += (productModel.quantity).toString().toInt()
 
-        tvCartItemQty.text  = cartTotalItem.toString()
-        tvCartPrice.text = cartTotalPrice.toString()
+        tvCartItemQty.text  = "${cartTotalItem.toString()} Item"
+        tvCartPrice.text = "₹${cartTotalPrice.toString()}"
 
         val updateCartTotalPrice = hashMapOf("cartTotal" to cartTotalPrice)
         val updateCartTotalItem = hashMapOf("totalItem" to cartTotalItem)

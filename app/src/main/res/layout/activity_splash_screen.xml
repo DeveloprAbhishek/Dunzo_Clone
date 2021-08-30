@@ -13,5 +13,5 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:fitsSystemWindows="true"
-        /></RelativeLayout>
+        android:fitsSystemWindows="true"/>
+</RelativeLayout>
