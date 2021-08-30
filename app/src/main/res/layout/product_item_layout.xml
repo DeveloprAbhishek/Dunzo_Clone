@@ -113,13 +113,16 @@
             android:layout_marginStart="@dimen/dp_7"
             android:layout_marginTop="@dimen/dp_7"
             android:layout_marginEnd="@dimen/dp_7"
-            android:visibility="gone"
+            android:paddingStart="@dimen/dp_7"
             android:id="@+id/cvProductAdd"
             android:layout_marginBottom="@dimen/dp_7"
             android:background="@drawable/button_add_background"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/dp_7">
+            android:paddingTop="@dimen/dp_7"
+            android:paddingEnd="@dimen/dp_9"
+            android:paddingBottom="@dimen/dp_7"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/ivButtonMinus"

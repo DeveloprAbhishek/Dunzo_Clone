@@ -28,5 +28,4 @@
         android:text="@string/fresh_fruits"
         android:textColor="@color/black"
         android:textStyle="bold" />
-
 </LinearLayout>

@@ -35,7 +35,7 @@
         </activity>
         <activity android:name=".Activities.VerifyMobileActivity" />
         <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.SplashScreen"></activity>
+        <activity android:name=".Activities.SplashScreen" />
         <activity android:name=".MainActivity" />
 
         <meta-data
