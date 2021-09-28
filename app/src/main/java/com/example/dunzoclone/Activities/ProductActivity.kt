@@ -22,6 +22,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.activity_store_category.*
 import java.util.ArrayList
+import kotlin.properties.Delegates
 
 class ProductActivity : AppCompatActivity(), ProductItemClickListener {
     //₹
@@ -39,6 +40,7 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
     private var cartTotalPrice: Int = 0
     private var cartTotalItem: Int = 0
 
+    private lateinit var productAdapter: ProductAdapter
     //firestore
     private var listOfProducts = ArrayList<Products>()
     private val db = Firebase.firestore
@@ -59,10 +61,9 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
         auth.currentUser?.uid?.let {
             cartRef.document(it).collection("cartItem").get().addOnSuccessListener { document ->
                 for (doc in document) {
-                    cartProductId.put(doc.data["product_id"].toString(), doc.data["product_id"].toString())
+                    cartProductId[doc.data["product_id"].toString()] = doc.data["product_id"].toString()
                 }
             }
-
         }
     }
 
@@ -101,6 +102,7 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
                     listOfProducts.add(storeListObject)
                 }
                 setAdapter()
+                productAdapter.notifyDataSetChanged()
 
             } else {
                 Log.d(tag, "Current data: null")
@@ -135,8 +137,9 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
     }
 
     private fun setAdapter() {
+        productAdapter = ProductAdapter(listOfProducts, this, cartProductId)
         productRecyclerView.layoutManager = LinearLayoutManager(this)
-        productRecyclerView.adapter = ProductAdapter(listOfProducts, this, cartProductId)
+        productRecyclerView.adapter = productAdapter
     }
 
     override fun onItemClickListener(productModel: Products, storePosition: Int) {
@@ -156,24 +159,64 @@ class ProductActivity : AppCompatActivity(), ProductItemClickListener {
     }
 
     override fun onPlusButtonClick(productModel: Products, storePosition: Int) {
-
-    }
-
-    override fun onMinusButtonClick(productModel: Products, storePosition: Int) {
-        cartTotalPrice -= productModel.price.toString().toInt()
-        cartTotalItem -= productModel.quantity.toString().toInt()
+        val qty = productModel.quantity.toString().toInt() + 1
+        productModel.quantity = qty.toString()
+        cartTotalPrice += productModel.price.toString().toInt()
+        cartTotalItem += 1
 
         tvCartItemQty.text  = "${cartTotalItem.toString()} Item"
         tvCartPrice.text = "₹${cartTotalPrice.toString()}"
 
         val updateCartTotalPrice = hashMapOf("cartTotal" to cartTotalPrice)
         val updateCartTotalItem = hashMapOf("totalItem" to cartTotalItem)
+        //val productQty = hashMapOf("quantity" to (++proQt).toString())
 
         auth.currentUser?.uid?.let {
-            cartRef.document(it).collection("cartItem").document(productModel.product_id).delete()
+            cartRef.document(it).collection("cartItem").document(productModel.product_id).set(productModel)
             cartRef.document(it).set(updateCartTotalPrice, SetOptions.merge())
             cartRef.document(it).set(updateCartTotalItem, SetOptions.merge())
         }
+    }
+
+    override fun onMinusButtonClick(productModel: Products, storePosition: Int) {
+
+        if(productModel.quantity == "1") {
+            cartTotalPrice -= productModel.price.toString().toInt()
+            cartTotalItem -= 1
+
+            tvCartItemQty.text  = "${cartTotalItem.toString()} Item"
+            tvCartPrice.text = "₹${cartTotalPrice.toString()}"
+
+            val updateCartTotalPrice = hashMapOf("cartTotal" to cartTotalPrice)
+            val updateCartTotalItem = hashMapOf("totalItem" to cartTotalItem)
+
+            auth.currentUser?.uid?.let {
+                cartRef.document(it).collection("cartItem").document(productModel.product_id).delete()
+                cartRef.document(it).set(updateCartTotalPrice, SetOptions.merge())
+                cartRef.document(it).set(updateCartTotalItem, SetOptions.merge())
+            }
+        } else {
+            cartTotalPrice -= productModel.price.toString().toInt()
+            cartTotalItem -= 1
+
+            val qty = productModel.quantity.toString().toInt() - 1
+            productModel.quantity = qty.toString()
+
+            tvCartItemQty.text  = "${cartTotalItem.toString()} Item"
+            tvCartPrice.text = "₹${cartTotalPrice.toString()}"
+
+            val updateCartTotalPrice = hashMapOf("cartTotal" to cartTotalPrice)
+            val updateCartTotalItem = hashMapOf("totalItem" to cartTotalItem)
+
+            auth.currentUser?.uid?.let {
+                cartRef.document(it).collection("cartItem").document(productModel.product_id).set(productModel)
+                cartRef.document(it).set(updateCartTotalPrice, SetOptions.merge())
+                cartRef.document(it).set(updateCartTotalItem, SetOptions.merge())
+            }
+        }
+
+        //productAdapter.notifyItemChanged(storePosition)
+
     }
 
     private fun addDataToCart(productModel: Products, position: Int) {

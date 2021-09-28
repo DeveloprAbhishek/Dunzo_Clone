@@ -14,6 +14,7 @@ class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             tvCartItemPrise.text = "₹"+cartList.price
             tvCartItemWeight.text = cartList.quantity
             tvCartitemName.text = cartList.name
+            tvCartItemQty.text = cartList.quantity
         }
     }
 

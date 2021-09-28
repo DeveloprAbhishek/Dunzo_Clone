@@ -16,18 +16,19 @@ import com.razorpay.PaymentResultListener;
 import org.json.JSONObject;
 
 public class PaymentActivity extends AppCompatActivity  implements PaymentResultListener {
-
+    int amount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
         Checkout.preload(getApplicationContext());
+        amount = getIntent().getIntExtra("amount",0);
         startPayment();
     }
 
 
     private void startPayment() {
-        String  amtStr = Integer.toString(500*100);
+        String  amtStr = Integer.toString(amount*100);
         Checkout checkout = new Checkout();
         checkout.setKeyID("rzp_test_RDw06iKDxiNYZu");
         checkout.setImage(R.drawable.rzp_logo);
@@ -60,8 +61,6 @@ public class PaymentActivity extends AppCompatActivity  implements PaymentResult
     public void onPaymentSuccess(String s) {
         Log.d("abhishek", s);
         redirect();
-
-
     }
 
     private void redirect() {

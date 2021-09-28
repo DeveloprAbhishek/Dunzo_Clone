@@ -90,6 +90,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productRecyclerView"
         android:layout_width="match_parent"

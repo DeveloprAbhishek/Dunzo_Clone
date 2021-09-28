@@ -2,28 +2,67 @@ package com.example.dunzoclone.Fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import com.example.dunzoclone.Activities.AdminActivity
-import com.example.dunzoclone.Activities.EmptyCartActivity
-import com.example.dunzoclone.Activities.LocationActivity
-import com.example.dunzoclone.Activities.StoresActivity
+import com.example.dunzoclone.Activities.*
 import com.example.dunzoclone.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.SetOptions
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_cart.*
 import kotlinx.android.synthetic.main.fragment_home.*
+
 
 class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
 
+    //firestore
+    private lateinit var auth: FirebaseAuth
+    private val db = Firebase.firestore
+    private val currentAddressRef = db.collection("users");
+    private var cartTotalItem: Int = 0
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        auth = Firebase.auth
+        getCurrentAddress()
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        getCartTotal()
+    }
+
+    private fun getCurrentAddress() {
+        auth.currentUser?.uid?.let {
+            currentAddressRef.document(it).get().addOnSuccessListener { doc->
+                if (doc.data?.get("address") != null) {
+                    tvToolbarLocation.text = doc.data?.get("address").toString()
+                } else {
+                    tvToolbarLocation.text = "Rasta path"
+                }
+            }
+        }
+    }
+
+    private fun getCartTotal() {
+        auth.currentUser?.uid?.let {
+            currentAddressRef.document(it).get().addOnSuccessListener { document ->
+                if (document.data?.get("totalItem") != null) {
+                    cartTotalItem = document.data?.get("totalItem").toString().toInt()
+                }
+            }
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
-
-
         val imageList = ArrayList<SlideModel>()
 
         imageList.add(SlideModel(R.drawable.vf1))
@@ -77,7 +116,11 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
                 startActivity(Intent(context, AdminActivity::class.java))
             }
             R.id.ivToolbarCart -> {
-                startActivity(Intent(context, EmptyCartActivity::class.java))
+                if(cartTotalItem>0) {
+                    startActivity(Intent(context, CartActivity::class.java))
+                } else {
+                    startActivity(Intent(context, EmptyCartActivity::class.java))
+                }
             }
             R.id.tvToolbarLocation -> {
                 startActivity(Intent(context, LocationActivity::class.java))
@@ -85,13 +128,4 @@ class HomeFragment : Fragment(R.layout.fragment_home), View.OnClickListener {
         }
     }
 
-
-//     fun show_vf_images() {
-//
-//         view_Flipper.flipInterval = 3000
-//         view_Flipper.isAutoStart = true
-//         view_Flipper.startFlipping()
-//         view_Flipper.setInAnimation(context,R.anim.flip_in)
-//         view_Flipper.setOutAnimation(context,R.anim.flip_out)
-//    }
 }

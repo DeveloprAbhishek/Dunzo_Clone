@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".Activities.MapActivity">
 
+    <androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <Button
+        android:id="@+id/btnConfirmLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Confirm Location"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

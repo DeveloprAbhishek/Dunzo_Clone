@@ -60,7 +60,9 @@ class CartActivity : AppCompatActivity(), PaymentResultListener {
 
         btnPay.setOnClickListener {
             updateOrder()
-            startActivity(Intent(this, PaymentActivity::class.java))
+            var intent = Intent(this, PaymentActivity::class.java)
+            intent.putExtra("amount", cartTotalPrice)
+            startActivity(intent)
         }
     }
 

@@ -5,15 +5,20 @@
       <map>
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/button_add_background.xml" value="0.28615384615384615" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/default_pager_dot.xml" value="0.290625" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/ic_arrow_down_svgrepo_com.xml" value="0.25833333333333336" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/ic_arrow_up_svgrepo_com.xml" value="0.25833333333333336" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/tab_pager.xml" value="0.290625" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_admin.xml" value="0.18177083333333333" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_cart.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_empty_cart.xml" value="0.536" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_empty_order_screen.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_location.xml" value="0.2" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_location.xml" value="0.176" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_order.xml" value="0.25885416666666666" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_map.xml" value="0.2" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_map2.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_order.xml" value="0.2" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_order_detail.xml" value="0.13425925925925927" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_order_details.xml" value="0.264" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_payment.xml" value="0.18020833333333333" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_payment_success.xml" value="0.20729166666666668" />
@@ -24,8 +29,9 @@
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_stores.xml" value="0.2" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_user_profile.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_verify_mobile.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_home.xml" value="0.176" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_orders.xml" value="0.18854166666666666" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_empty_order.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_orders.xml" value="0.4" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/fragment_search.xml" value="0.18854166666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/item_layout_bestsell.xml" value="0.72" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/item_layout_cart_order.xml" value="0.2375" />

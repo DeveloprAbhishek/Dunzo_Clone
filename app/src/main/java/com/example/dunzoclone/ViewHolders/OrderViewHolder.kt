@@ -9,11 +9,8 @@ import kotlinx.android.synthetic.main.order_item_layout.view.*
 class OrderViewHolder(view : View) : RecyclerView.ViewHolder(view) {
     fun setOrderData(orderData: Products) {
         itemView.apply {
-            Glide.with(ivImageProduct).load(orderData.image).into(ivImageProduct)
-
-            tvCategoryNameOrder.text = orderData.category
-            tvProductQuantityOrder.text = orderData.quantity
-            tvPriceOrder.text = orderData.price
+            tvProductNameOrder.text = orderData.name
+            tvProductQuantityOrder.text = "x"+ orderData.quantity
         }
     }
 }

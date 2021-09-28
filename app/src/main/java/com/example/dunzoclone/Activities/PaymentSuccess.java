@@ -35,7 +35,7 @@ public class PaymentSuccess extends AppCompatActivity {
         VideoViewPs.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                Intent intent = new  Intent(PaymentSuccess.this, OrderActivity.class);
+                Intent intent = new  Intent(PaymentSuccess.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

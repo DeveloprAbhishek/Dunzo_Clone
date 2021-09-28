@@ -51,7 +51,7 @@
             android:layout_marginStart="@dimen/dp_12"
             android:maxLines="2"
             android:ellipsize="end"
-            android:text="Garlic (250 Gms) + Ginger (100 Gms)"
+            android:text="1 KG"
             app:layout_constraintStart_toEndOf="@+id/ivProductImage"
             app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
 
