@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dunzoclone">
+    package="com.masaischool.dunzoclone">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -14,21 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
         <activity
-            android:name=".Activities.OrderDetailActivity"
+            android:name="com.masaischool.dunzoclone.Activities.OrderDetailActivity"
             android:exported="true" />
         <activity android:name=".Activities.MapActivity"></activity>
-        <activity android:name=".Activities.PaymentSuccess" />
-        <activity android:name=".Activities.PaymentActivity" />
+        <activity android:name="com.masaischool.dunzoclone.Activities.PaymentSuccess" />
+        <activity android:name="com.masaischool.dunzoclone.Activities.PaymentActivity" />
         <activity android:name=".Activities.ProductActivity" />
         <activity android:name=".Activities.StoresActivity" />
         <activity android:name=".Activities.LocationActivity" />
         <activity android:name=".Activities.StoreCategoryActivity" />
-        <activity android:name=".Activities.CartActivity" />
+        <activity android:name="com.masaischool.dunzoclone.Activities.CartActivity" />
         <activity android:name=".Activities.EmptyCartActivity" />
         <activity android:name=".Activities.ProductDetailActivity" />
         <activity android:name=".Activities.OrderDetailsActivity" />
         <activity android:name=".Activities.OrderActivity" />
-        <activity android:name=".Activities.AdminActivity" />
+        <activity android:name="com.masaischool.dunzoclone.Activities.AdminActivity" />
         <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.VerifyMobileActivity" />
         <activity android:name=".Activities.LoginActivity" />

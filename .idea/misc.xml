@@ -3,16 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1780821917808219" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/button_add_background.xml" value="0.28615384615384615" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/default_pager_dot.xml" value="0.290625" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/ic_arrow_down_svgrepo_com.xml" value="0.25833333333333336" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/ic_arrow_up_svgrepo_com.xml" value="0.25833333333333336" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/drawable/tab_pager.xml" value="0.290625" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/font/amaranth_bold.xml" value="0.19041095890410958" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/font/days_one.xml" value="0.19041095890410958" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_admin.xml" value="0.18177083333333333" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_cart.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_empty_cart.xml" value="0.536" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_empty_order_screen.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_location.xml" value="0.176" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/DunzoClone/app/src/main/res/layout/activity_map.xml" value="0.2" />

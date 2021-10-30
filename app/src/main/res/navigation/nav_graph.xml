@@ -6,6 +6,6 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.dunzoclone.Fragments.HomeFragment"
+        android:name="com.masaischool.dunzoclone.Fragments.HomeFragment"
         android:label="HomeFragment" />
 </navigation>
