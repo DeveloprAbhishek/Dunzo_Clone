@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_green"
-    tools:context=".Activities.OrderActivity">
+    android:background="@color/white"
+    tools:context=".Activities.HomeActivity">
 
     <RelativeLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/dark_green"
         android:padding="@dimen/dp_12">
 
         <ImageButton
@@ -49,14 +50,12 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/topBar"
-        android:layout_marginBottom="-12dp"
-        android:background="@color/white"
-        app:cardCornerRadius="@dimen/dp_12">
+        android:layout_below="@+id/topBar">
 
         <LinearLayout
+            android:id="@+id/middleLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical">
 
@@ -67,16 +66,246 @@
                 android:padding="@dimen/dp_7"
                 android:text="@string/active_orders"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_17"
                 android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dp_12">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivImageProduct"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+                <TextView
+                    android:id="@+id/tvCategoryNameOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/ivImageProduct"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:text="Fruits &amp; Vegetables"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/tvOrderDate"
+                    app:layout_constraintStart_toEndOf="@+id/ivImageProduct"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvOrderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:text="Aug 23,"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivImageProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCategoryNameOrder" />
+
+                <TextView
+                    android:id="@+id/tvOrderTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:text="9:51 AM"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvOrderDate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCategoryNameOrder" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="94dp"
+                    android:src="@drawable/ic_arrow_forward_order"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvCategoryNameOrder"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/grey"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_7">
+
+                    <ImageView
+                        android:id="@+id/arrowUpIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_up_svgrepo_com" />
+
+                    <TextView
+                        android:id="@+id/tvStoreNameOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_toRightOf="@id/arrowUpIcon"
+                        android:drawablePadding="@dimen/dp_7"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:text="Ashok Nagar,Bangalore"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvStoreAddressOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvStoreNameOrder"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_toRightOf="@id/arrowUpIcon"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="2dp"
+
+                        android:text="Main Market, Java City"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_7">
+
+                    <ImageView
+                        android:id="@+id/arrowDownIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_up_svgrepo_com" />
+
+                    <TextView
+                        android:id="@+id/tvCustomerAddressOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_toRightOf="@id/arrowDownIcon"
+                        android:drawablePadding="@dimen/dp_7"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:text="Ashok Nagar,Bangalore"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCustomerSubAddressOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCustomerAddressOrder"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_toRightOf="@id/arrowDownIcon"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:text="Main Market, Java City"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/orderRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:itemCount="4"
                 tools:listitem="@layout/order_item_layout" />
-        </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12">
+
+                <TextView
+                    android:id="@+id/tvPriceTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_7"
+                    android:text="Paid ₹"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPriceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/tvPriceTag"
+                    android:padding="@dimen/dp_7"
+                    android:text="35.00"
+                    android:textColor="@color/light_green"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_7">
+
+                <TextView
+                    android:id="@+id/tvOrderInProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableStart="@drawable/ic_baseline_radio_order24"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:text="Order in progress"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:layout_marginEnd="@dimen/dp_7"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:background="@drawable/trackbutton_background"
+                    android:gravity="center"
+                    android:text="Track Order"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+        </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>

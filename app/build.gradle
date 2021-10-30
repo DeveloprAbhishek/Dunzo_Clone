@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.dunzoclone"
+        applicationId "com.masaischool.dunzoclone"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -94,5 +94,12 @@ dependencies {
     implementation 'com.razorpay:checkout:1.6.12'
 
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
+    //google services
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.github.jd-alexander:library:1.1.0'
+    implementation 'com.google.android.material:material:1.4.0'
+
 
 }
