@@ -18,7 +18,8 @@
         <activity android:name=".Activities.ProductActivity" />
         <activity android:name=".Activities.StoresActivity" />
         <activity android:name=".Activities.LocationActivity" />
-        <activity android:name=".Activities.StoreCategoryActivity" />
+        <activity android:name=".Activities.StoreCategoryActivity">
+        </activity>
         <activity android:name=".Activities.CartActivity" />
         <activity android:name=".Activities.EmptyCartActivity" />
         <activity android:name=".Activities.ProductDetailActivity" />

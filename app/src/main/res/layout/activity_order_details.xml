@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,302 +7,329 @@
     android:orientation="vertical"
     tools:context=".Activities.OrderDetailsActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="@dimen/dp_12">
 
-        <ImageButton
-            android:id="@+id/ibBackButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@color/white"
-            android:src="@drawable/ic_arrow_back_24"
-            app:tint="@color/black"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/tvHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:background="@color/white"
-            android:drawablePadding="@dimen/dp_12"
-            android:gravity="center"
-            android:text="@string/help"
-            android:textAlignment="gravity"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_18"
-            app:drawableStartCompat="@drawable/ic_chat_help"
-            tools:ignore="RelativeOverlap" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_7">
-
-        <ImageView
-            android:id="@+id/indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/dp_7"
-            android:src="@drawable/ic_baseline_radio_order24"
-            android:contentDescription="@string/todo" />
-
-        <TextView
-            android:id="@+id/tvOrderDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/indicator"
-            android:drawablePadding="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="@string/order_details"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_22"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvOrderDateDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvOrderDetails"
-            android:layout_marginStart="@dimen/dp_12"
-            android:layout_toEndOf="@+id/indicator"
-            android:text="Aug 23,"
-            android:textColor="@color/grey"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvOrderTimeDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvOrderDetails"
-            android:layout_marginStart="@dimen/dp_12"
-            android:layout_toEndOf="@+id/tvOrderDateDetail"
-            android:text="9:25 AM"
-            android:textColor="@color/grey"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvOrderDetails"
-            android:layout_marginStart="@dimen/dp_12"
-            android:layout_toEndOf="@+id/tvOrderTimeDetail"
-            android:text="Ongoing"
-            android:textColor="@color/grey"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_7"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_7">
-
-        <ImageView
-            android:id="@+id/ivStoreIndicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/dp_7"
-            android:src="@drawable/ic_store_indicator" />
-
-        <TextView
-            android:id="@+id/tvStoreName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ivStoreIndicator"
-            android:drawablePadding="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="Abhishek Nagar, Java City,Bangalore"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvStoreName"
-            android:layout_toEndOf="@+id/ivStoreIndicator"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:padding="@dimen/dp_7"
-            android:text="Main Market, Java City" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_7">
-
-        <ImageView
-            android:id="@+id/ivCustomerIndicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/dp_7"
-            android:src="@drawable/ic_customer_indicator"
-            android:contentDescription="@string/todo" />
-
-        <TextView
-            android:id="@+id/tvCustomerAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ivCustomerIndicator"
-            android:drawablePadding="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="Amol Nagar, Kotlin City,Bangalore"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvCustomerAddress"
-            android:layout_toEndOf="@+id/ivCustomerIndicator"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:padding="@dimen/dp_7"
-            android:text="Main Market, Java City" />
-    </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/orderDetailsRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/dp_12"
-        android:background="@color/white"
-        android:padding="@dimen/dp_12">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvPaymentHeader"
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/payment_details"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_18"
-            android:textStyle="bold" />
+            android:background="@color/white"
+            android:padding="@dimen/dp_12">
 
-        <TextView
-            android:id="@+id/tvItemTotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvPaymentHeader"
-            android:layout_marginTop="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="@string/item_total"
-            android:textColor="@color/visible_grey"
-            android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/ibBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:src="@drawable/ic_arrow_back_24"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/tvItemTotalValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvPaymentHeader"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/dp_12"
-            android:gravity="start"
-            android:padding="@dimen/dp_7"
-            android:text="₹ 10"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_12"
+                android:gravity="center"
+                android:text="@string/help"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:drawableStartCompat="@drawable/ic_chat_help"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
 
-        <View
-            android:id="@id/line1"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/tvItemTotal"
-            android:layout_margin="@dimen/dp_12"
-            android:background="@color/visible_grey"
-            android:padding="@dimen/dp_7" />
-
-        <TextView
-            android:id="@+id/tvPartnerDeliveryFee"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvItemTotal"
-            android:layout_marginTop="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="@string/partner_delivery_fee"
-            android:textColor="@color/visible_grey"
-            android:textStyle="bold" />
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_7">
 
-        <TextView
-            android:id="@+id/tvPartnerDeliveryFeeValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvItemTotalValue"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="₹ 25"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/ic_baseline_radio_order24" />
 
-        <View
-            android:id="@id/line1"
+            <TextView
+                android:id="@+id/tvOrderDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/indicator"
+                android:drawablePadding="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="@string/order_details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOrderDateDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOrderDetails"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_toEndOf="@+id/indicator"
+                android:text="Aug 23,"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOrderTimeDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOrderDetails"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_toEndOf="@+id/tvOrderDateDetail"
+                android:text="9:25 AM"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOrderDetails"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_toEndOf="@+id/tvOrderTimeDetail"
+                android:text="Ongoing"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/tvPartnerDeliveryFee"
-            android:layout_margin="@dimen/dp_12"
-            android:background="@color/visible_grey"
-            android:padding="@dimen/dp_7" />
+            android:layout_height="250dp"
+            tools:context=".MainActivity" />
 
-        <TextView
-            android:id="@+id/tvPaid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvPartnerDeliveryFee"
-            android:layout_marginTop="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="@string/paid"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/tvPaidMoneyValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvPartnerDeliveryFeeValue"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/dp_12"
-            android:padding="@dimen/dp_7"
-            android:text="₹ 30"
-            android:textColor="@color/light_green"
-            android:textStyle="bold" />
-
-        <View
-            android:id="@id/line1"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/tvPaid"
-            android:layout_margin="@dimen/dp_12"
-            android:background="@color/visible_grey"
-            android:padding="@dimen/dp_7" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_7">
 
-    </RelativeLayout>
-</LinearLayout>
+            <ImageView
+                android:id="@+id/ivStoreIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/ic_store_indicator" />
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivStoreIndicator"
+                android:drawablePadding="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="Abhishek Nagar, Java City,Bangalore"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvStoreName"
+                android:layout_toEndOf="@+id/ivStoreIndicator"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp_7"
+                android:text="Main Market, Java City" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_7">
+
+            <ImageView
+                android:id="@+id/ivCustomerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/ic_customer_indicator" />
+
+            <TextView
+                android:id="@+id/tvCustomerAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivCustomerIndicator"
+                android:drawablePadding="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="Amol Nagar, Kotlin City,Bangalore"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCustomerAddress"
+                android:layout_toEndOf="@+id/ivCustomerIndicator"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp_7"
+                android:text="Main Market, Java City" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orderDetailsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:padding="@dimen/dp_12">
+
+            <TextView
+                android:id="@+id/tvPaymentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvItemTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPaymentHeader"
+                android:layout_marginTop="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="@string/item_total"
+                android:textColor="@color/visible_grey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvItemTotalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPaymentHeader"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_12"
+                android:gravity="start"
+                android:padding="@dimen/dp_7"
+                android:text="₹ 10"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvItemTotal"
+                android:layout_margin="@dimen/dp_12"
+                android:background="@color/visible_grey"
+                android:padding="@dimen/dp_7" />
+
+            <TextView
+                android:id="@+id/tvPartnerDeliveryFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvItemTotal"
+                android:layout_marginTop="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="@string/partner_delivery_fee"
+                android:textColor="@color/visible_grey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPartnerDeliveryFeeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvItemTotalValue"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="₹ 25"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvPartnerDeliveryFee"
+                android:layout_margin="@dimen/dp_12"
+                android:backgroundTint="@color/white"
+                android:background="@color/visible_grey"
+                android:padding="@dimen/dp_7" />
+
+            <TextView
+                android:id="@+id/tvPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPartnerDeliveryFee"
+                android:layout_marginTop="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="@string/paid"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvPaidMoneyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPartnerDeliveryFeeValue"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_12"
+                android:padding="@dimen/dp_7"
+                android:text="₹ 30"
+                android:textColor="@color/light_green"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvPaid"
+                android:layout_margin="@dimen/dp_12"
+                android:background="@color/visible_grey"
+                android:padding="@dimen/dp_7" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/line1"
+                android:text="Cancel"
+                android:backgroundTint="@color/white"
+                android:textColor="#ff0000" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
