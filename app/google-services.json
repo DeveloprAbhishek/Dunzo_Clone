@@ -8,54 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:806901242906:android:20b06f4b132d4e3b3c85a3",
+        "mobilesdk_app_id": "1:806901242906:android:2f73f35f16f18bf23c85a3",
         "android_client_info": {
-          "package_name": "com.example.dunzoclone"
+          "package_name": "com.masai.dunzoclone"
         }
       },
       "oauth_client": [
         {
-          "client_id": "806901242906-0f93b4163c2l4kglo4cqja2e5d4pqbpd.apps.googleusercontent.com",
+          "client_id": "806901242906-7rjuo96b5lob27soj8kp0gfu00no9as0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.dunzoclone",
-            "certificate_hash": "7179bba4e9a6d8a41a1fe5b39ba212fe40ffc584"
-          }
-        },
-        {
-          "client_id": "806901242906-ns5dthkcsp61gkc2ta26qpbm7b74j2ss.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCGpflOZ46Oollomy-BzuyKEfNfkWV_46Q"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "806901242906-ns5dthkcsp61gkc2ta26qpbm7b74j2ss.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:806901242906:android:5719892422db8aaf3c85a3",
-        "android_client_info": {
-          "package_name": "com.masaischool.dunzoclone"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "806901242906-sbl3d6r8dogdb1d5av8n6kg63b3r6id3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.masaischool.dunzoclone",
+            "package_name": "com.masai.dunzoclone",
             "certificate_hash": "7179bba4e9a6d8a41a1fe5b39ba212fe40ffc584"
           }
         },
