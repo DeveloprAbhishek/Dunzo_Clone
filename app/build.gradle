@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.masaischool.dunzoclone"
+        applicationId "com.masai.dunzoclone"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

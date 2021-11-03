@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.masaischool.dunzoclone">
+    package="com.masai.dunzoclone">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -14,32 +14,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DunzoClone">
         <activity
-            android:name="com.masaischool.dunzoclone.Activities.OrderDetailActivity"
+            android:name="com.masai.dunzoclone.Activities.OrderDetailActivity"
             android:exported="true" />
-        <activity android:name=".Activities.MapActivity"></activity>
-        <activity android:name="com.masaischool.dunzoclone.Activities.PaymentSuccess" />
-        <activity android:name="com.masaischool.dunzoclone.Activities.PaymentActivity" />
-        <activity android:name=".Activities.ProductActivity" />
-        <activity android:name=".Activities.StoresActivity" />
-        <activity android:name=".Activities.LocationActivity" />
-        <activity android:name=".Activities.StoreCategoryActivity" />
-        <activity android:name="com.masaischool.dunzoclone.Activities.CartActivity" />
-        <activity android:name=".Activities.EmptyCartActivity" />
-        <activity android:name=".Activities.ProductDetailActivity" />
-        <activity android:name=".Activities.OrderDetailsActivity" />
-        <activity android:name=".Activities.OrderActivity" />
-        <activity android:name="com.masaischool.dunzoclone.Activities.AdminActivity" />
-        <activity android:name=".Activities.HomeActivity" />
-        <activity android:name=".Activities.VerifyMobileActivity" />
-        <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.SplashScreen">
+        <activity android:name="com.masai.dunzoclone.Activities.MapActivity"></activity>
+        <activity android:name="com.masai.dunzoclone.Activities.PaymentSuccess" />
+        <activity android:name="com.masai.dunzoclone.Activities.PaymentActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.ProductActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.StoresActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.LocationActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.StoreCategoryActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.CartActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.EmptyCartActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.ProductDetailActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.OrderDetailsActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.OrderActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.AdminActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.HomeActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.VerifyMobileActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.LoginActivity" />
+        <activity android:name="com.masai.dunzoclone.Activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.masai.dunzoclone.MainActivity" />
 
         <meta-data
             android:name="com.razorpay.ApiKey"
